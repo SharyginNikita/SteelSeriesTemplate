@@ -29,7 +29,7 @@ module.exports = {
                 options: {
                     cacheDirectory: true,
                     plugins: [
-                        "@babel/plugin-transform-runtime",
+                       // "@babel/plugin-transform-runtime",
                         "@babel/plugin-transform-spread",
                     ],
                 },

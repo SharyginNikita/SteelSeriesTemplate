@@ -22,23 +22,23 @@ html(lang="ru")
 
                 section.section.section-swiper
 
-                    .section-swiper__container
-
-                        .section-swiper__wrapper
-
-                            .section-swiper__slide
-                            .section-swiper__slide
-                            .section-swiper__slide
+                     .section-swiper__wrapper
+                     
+                         .section-swiper__slide
+                         .section-swiper__slide
+                         .section-swiper__slide
 
                 section.section.section-info
+                - var n = 0;
+                    while n < 4
+                        li= n++
+                        .section-info__item.section-info-item
 
-                    .section-info__item.section-info-item
+                            .section-info-item__image
 
-                        .section-info-item__image
+                            h3.section-info-item__title Первые по разработке ножей в России 
 
-                        h3.section-info-item__title Первые по разработке ножей в России 
-
-                        .section-info-item__description Мы лидеры среди российских компаний по качеству ножей.
+                            .section-info-item__description Мы лидеры среди российских компаний по качеству ножей.
 
                 section.section.section-purpose
 
@@ -92,17 +92,7 @@ html(lang="ru")
                                 |architecto beatae vitae dicta sunt
                                 |explicabo. Nemo enim ipsam voluptatem
 
-.section-purpose__column
-
-
-
-
-
-
-
-
 
         include components/footer.pug
 
     script(src="/js/main.js")
-    script(src="/js/global.js")

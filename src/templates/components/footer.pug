@@ -6,9 +6,21 @@ footer.footer
 
             nav.footer__nav.footer-nav
 
-                a(href="#").footer-nav__link
+                -
+                    var list = ["О нас", "Продукция", "Контакты"]
 
-            nav.footer__sections
+                each item in list
+
+                    a.footer-nav__link(href="#")= item
+
+            nav.footer__nav.footer-nav
+
+                -
+                    var list = ["Вся продукция", "Ножи промышленные", "Гильотины", 'Заточенные', 'Пилы']
+
+                each item in list
+
+                    a.footer-nav__link(href="#")= item
 
 
 
