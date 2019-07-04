@@ -1,3 +1,21 @@
 header.header
 
+    .header__wrapper
+
+        .header__logo
+
+        nav.header__nav.header-nav
+
+        -
+            var list = ["О нас", "Продукция", "Контакты"]
+
+        each item in list
+
+            a.header-nav__link(href="#")= item
+
+        .header__contacts.header-contacts
+
+            a(href="tel: +7 (812) 380 85 32").header-contacts__phone-number +7 (812) 380 85 32;
+
+            a(href="mailTo: sales@bktforsunka.ru").header-contacts__e-mail sales@bktforsunka.ru
 
