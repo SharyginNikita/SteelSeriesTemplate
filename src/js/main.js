@@ -8,9 +8,8 @@ let swiperMain = new Swiper('.section-swiper', {
     slidesPerView: 1,
 
     autoplay: {
-        delay: 9500,
+        //delay: 9500,
     },
-
 
     pagination: {
         el: '.swiper-main__pagination',

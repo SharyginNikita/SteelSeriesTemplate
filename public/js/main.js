@@ -105,7 +105,7 @@ eval("/**\n * Swiper 4.5.0\n * Most modern mobile touch slider and framework wit
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _swiperMin = _interopRequireDefault(__webpack_require__(/*! swiper/dist/js/swiper.min.js */ \"./node_modules/swiper/dist/js/swiper.min.js\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\n\nvar swiperMain = new _swiperMin[\"default\"]('.section-swiper', {\n  wrapperClass: 'section-swiper__wrapper',\n  slideClass: 'section-swiper__slide',\n  slidesPerView: 1,\n  autoplay: {\n    delay: 9500\n  },\n  pagination: {\n    el: '.swiper-main__pagination',\n    bulletClass: 'swiper-main__bullet',\n    bulletActiveClass: 'swiper-main__bullet_active',\n    renderBullet: function renderBullet(index, className) {\n      index = index + 1;\n\n      if (index <= 9) {\n        index = '0' + index;\n      }\n\n      return '<span tabindex=\"-1\" class=\"' + className + '\">' + index + '</span>';\n    },\n    clickable: true,\n    dynamicBullets: true\n  },\n  navigation: {\n    nextEl: '.swiper-main__next',\n    prevEl: '.swiper-main__prev'\n  }\n});\n/*\r\n \r\nimport yuor vue modules example\r\n\r\nimport Module from '../widgets/module';\r\nconst module = new Module('#module-widget');\r\n\r\n*/\n\n//# sourceURL=webpack:///./src/js/main.js?");
+eval("\n\nvar _swiperMin = _interopRequireDefault(__webpack_require__(/*! swiper/dist/js/swiper.min.js */ \"./node_modules/swiper/dist/js/swiper.min.js\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\n\nvar swiperMain = new _swiperMin[\"default\"]('.section-swiper', {\n  wrapperClass: 'section-swiper__wrapper',\n  slideClass: 'section-swiper__slide',\n  slidesPerView: 1,\n  autoplay: {//delay: 9500,\n  },\n  pagination: {\n    el: '.swiper-main__pagination',\n    bulletClass: 'swiper-main__bullet',\n    bulletActiveClass: 'swiper-main__bullet_active',\n    renderBullet: function renderBullet(index, className) {\n      index = index + 1;\n\n      if (index <= 9) {\n        index = '0' + index;\n      }\n\n      return '<span tabindex=\"-1\" class=\"' + className + '\">' + index + '</span>';\n    },\n    clickable: true,\n    dynamicBullets: true\n  },\n  navigation: {\n    nextEl: '.swiper-main__next',\n    prevEl: '.swiper-main__prev'\n  }\n});\n/*\n \nimport yuor vue modules example\n\nimport Module from '../widgets/module';\nconst module = new Module('#module-widget');\n\n*/\n\n//# sourceURL=webpack:///./src/js/main.js?");
 
 /***/ }),
 
@@ -116,7 +116,7 @@ eval("\n\nvar _swiperMin = _interopRequireDefault(__webpack_require__(/*! swiper
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__(/*! G:\\project\\SteelSeriesTemplate\\src\\js\\main.js */\"./src/js/main.js\");\n\n\n//# sourceURL=webpack:///multi_./src/js/main.js?");
+eval("module.exports = __webpack_require__(/*! /usr/local/www/sites/SteelSeriesTemplate/src/js/main.js */\"./src/js/main.js\");\n\n\n//# sourceURL=webpack:///multi_./src/js/main.js?");
 
 /***/ })
 

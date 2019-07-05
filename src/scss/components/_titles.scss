@@ -4,12 +4,19 @@
     font-weight: 600;
     font-family: $font-default;
     text-transform: uppercase;
-    text-align: center;
     margin: 0;
 
     &_h1 {
     
         font-size: 26px;
+    
+    }
+
+    &_h2 {
+    
+        font-family: $font-subtitle;
+        font-size: 30px;
+        font-weight: bold;
     
     }
 }
