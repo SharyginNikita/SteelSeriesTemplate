@@ -11,26 +11,16 @@ let swiperMain = new Swiper('.section-swiper', {
         //delay: 9500,
     },
 
-    pagination: {
-        el: '.swiper-main__pagination',
-        bulletClass: 'swiper-main__bullet',
-        bulletActiveClass: 'swiper-main__bullet_active',
-        renderBullet: function (index, className) {
-
-            index = (index + 1)
-            if (index <= 9) {
-                index = '0' + index;    
-            }
-
-            return '<span tabindex="-1" class="' + className + '">' + index + '</span>';
-        },
-        clickable: true,
-        dynamicBullets: true,
+    navigation: {
+        nextEl: '.section-swiper__next',
+        prevEl: '.section-swiper__prev',
     },
 
-    navigation: {
-        nextEl: '.swiper-main__next',
-        prevEl: '.swiper-main__prev',
+    pagination: {
+        el: '.section-swiper__pagination',
+        type: 'bullets',
+        bulletClass: 'section-swiper__bullet',
+        bulletActiveClass: 'section-swiper__bullet_active',
     },
 });
 /*

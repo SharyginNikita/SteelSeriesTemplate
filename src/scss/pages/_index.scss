@@ -39,6 +39,74 @@
         text-transform: uppercase;
 
     }
+
+    &__prev, &__next {
+
+        background: url('/images/icons/arrow-right.svg') no-repeat 5px 3.5px;
+        background-size: 80%;
+        border: 4px solid #fff;
+        box-shadow: 0 3px 6px 0 #00000074;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: calc(50% - 40px);
+        border-radius: 50%;
+        z-index: 3;
+        cursor: pointer;
+
+    }
+
+    &__prev {
+    
+        transform: rotateY(180deg);
+        left: 30px;
+    
+    }
+
+    &__next {
+    
+        right: 30px;
+    
+    }
+
+    &__pagination {
+
+        position: absolute;
+        bottom: 70px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        display: flex;
+        height: 13px;
+        max-width: 50px;
+        width: 100%;
+
+    }
+
+    &__bullet {
+
+        flex-shrink: 0;
+        width: 14px;
+        height: 100%;
+        margin-right: 19px;
+        z-index: 3;
+        border-radius: 50%;
+        background-color: #dcdcdc;
+        transition: .6s ease;
+
+        &_active {
+
+            background-color: $color-green;
+            transition: .6s ease;
+
+        }
+
+        &:last-child {
+
+            margin: 0;
+
+        }
+    }
 }
 
 .section-info {

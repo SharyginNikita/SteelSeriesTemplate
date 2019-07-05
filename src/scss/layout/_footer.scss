@@ -40,9 +40,23 @@
 
     &__link {
     
+        align-self: flex-start;
         color: #fff;
         font-size: 18px;
         margin-bottom: 24px;
+        border-bottom: 1px solid transparent;
+        transition: 1s ease;
+        cursor: pointer;
+        transition: 1s ease;
+
+        &:hover {
+        
+            color: $color-black;
+            border-bottom-color: $color-black;
+            transition: 1s ease;
+
+        }
+
 
         &:last-child {
         
@@ -93,13 +107,23 @@
         color: #fff;
         text-transform: uppercase;
         margin-right: 102px;
+        border-bottom: 5px solid transparent;
+        transition: 1s ease;
+        cursor: pointer;
+
+        &:hover {
+        
+            color: $color-black;
+            border-bottom-color: $color-black;
+            transition: 1s ease;
+
+        }
 
         &:last-child {
         
             margin-right: 0;
         
         }
-    
     }
 }
 
