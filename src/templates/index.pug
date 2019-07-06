@@ -26,40 +26,73 @@ html(lang="ru")
 
                     .section-swiper__next
 
+                        .section-swiper__next-wrapper
+
                     .section-swiper__wrapper
 
+                        - for (var x = 0; x < 3; x++)
 
-                        .section-swiper__slide
+                            .section-swiper__slide
 
-                             .section-swiper__content
-                                 
-                                 .section-swiper__title 
-                                     |Steel
-                                     br
-                                     |Series
-
-                        .section-swiper__slide
-                        .section-swiper__slide
+                                .section-swiper__content
+                                    
+                                    .section-swiper__title 
+                                        |Steel
+                                        br
+                                        |Series
 
                 .main__container
 
                     section.section.section-info
 
-                        - for (var x = 0; x < 4; x++)
+                        .section-info__item.section-info-item
 
-                            .section-info__item.section-info-item
+                            .section-info-item__image
 
-                                .section-info-item__image
+                            h3.section-info-item__title Первые по разработке ножей в России 
 
-                                h3.section-info-item__title Первые по разработке ножей в России 
+                            .section-info-item__description Мы лидеры среди российских компаний по качеству ножей.
 
-                                .section-info-item__description Мы лидеры среди российских компаний по качеству ножей.
+                        .section-info__item.section-info-item
+
+                            .section-info-item__image
+
+                            h3.section-info-item__title 11 лет на рынке промышленных ножей
+
+                            .section-info-item__description Качество - проверенное временеми удобство, проверенное людьми!
+
+                        .section-info__item.section-info-item
+
+                            .section-info-item__image
+
+                            .section-info-item__wrapper-title
+                             
+                                span.section-info-item__info >1млн
+
+                                h3.section-info-item__title Ножей выпущено
+
+                            .section-info-item__description К настоящему времени в производстве используется более миллиона наших ножей
+                        
+                        .section-info__item.section-info-item
+
+                            .section-info-item__image
+
+                            .section-info-item__wrapper-title
+                             
+                                span.section-info-item__info 100%
+
+                                h3.section-info-item__title 
+                                    |Сервис
+                                    br
+                                    |Гарантия
+
+                            .section-info-item__description Мы гарантируем качество продукции и предоставляем бесплатне обслуживание
 
                     section.section.section-purpose
 
                         .section-purpose__image
 
-                        .section-puprpose__wrapper
+                        .section-purpose__wrapper
 
                             h2.title.title_h2 Наша миссия — работать для вас
 
@@ -106,6 +139,8 @@ html(lang="ru")
                                     |ab illo inventore veritatis et quasi
                                     |architecto beatae vitae dicta sunt
                                     |explicabo. Nemo enim ipsam voluptatem
+
+                            include components/btn-contact
 
 
         include components/footer.pug

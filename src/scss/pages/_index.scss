@@ -1,9 +1,16 @@
 .section-swiper {
 
+    position: relative;
     width: 100%;
     height: 790px;
     overflow: hidden;
-    
+
+    @media screen and (max-width: 1198px) {
+
+        height: 365px;
+
+    }
+
     &__wrapper {
 
         display: flex;
@@ -20,53 +27,83 @@
         background: $color-gray url('/images/section-swiper__bg.png') no-repeat center / cover;
         height: 100%;
 
+        @media screen and (max-width: 1198px) {
+
+            justify-content: flex-start;
+
+        }
+
     }
 
     &__content {
 
-        max-width: 745px;
+        max-width: $width-container;
         width: 100%;
-        padding: 111px 0 238px 0;
+        padding: 111px 0 215px 87px;
         box-sizing: border-box;
+
+        @media screen and (max-width: 1198px) {
+
+            padding: 20px;
+
+        }
 
     }
 
     &__title {
-   
+
         font-family: $font-title;
         font-size: 250px;
         font-weight: bold;
+        line-height: .97;
         text-transform: uppercase;
+        letter-spacing: -1px;
 
-    }
+        @media screen and (max-width: 1198px) {
 
-    &__prev, &__next {
+            font-size: 98px;
 
-        background: url('/images/icons/arrow-right.svg') no-repeat 5px 3.5px;
-        background-size: 80%;
-        border: 4px solid #fff;
-        box-shadow: 0 3px 6px 0 #00000074;
-        width: 40px;
-        height: 40px;
-        position: absolute;
-        top: calc(50% - 40px);
-        border-radius: 50%;
-        z-index: 3;
-        cursor: pointer;
+        }
 
-    }
-
-    &__prev {
-    
-        transform: rotateY(180deg);
-        left: 30px;
-    
     }
 
     &__next {
-    
-        right: 30px;
-    
+
+        position: absolute;
+        bottom: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        box-sizing: border-box;
+        padding-right: 950px;
+        flex-shrink: 0;
+        z-index: 3;
+        cursor: pointer;
+
+        @media screen and (max-width: 1198px) {
+
+            bottom: 80px;
+            width: auto;
+            padding: 0 0 0 20px;
+
+        }
+    }
+
+    &__next-wrapper {
+
+        width: 82px;
+        height: 82px;
+        background: $color-green url('/images/icons/next.svg') no-repeat 30px center / 30%;
+        border-radius: 50%;
+
+        @media screen and (max-width: 1198px) {
+
+            width: 60px;
+            height: 60px;
+            background-position-x: 22px;
+
+        }
+
     }
 
     &__pagination {
@@ -80,6 +117,12 @@
         height: 13px;
         max-width: 50px;
         width: 100%;
+
+        @media screen and (max-width: 1198px) {
+
+            bottom: 20px;
+
+        }
 
     }
 
@@ -113,7 +156,15 @@
 
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 71px;
 
+    @media screen and (max-width: 616px) {
+
+        flex-direction: column;
+        margin-top: 0;
+
+    }
 }
 
 .section-info-item {
@@ -121,15 +172,97 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 270px;
-    margin-top: 71px;
+    max-width: 288px;
+    box-sizing: border-box;
+    padding: 0 10px 10px 10px;
+
+    @media screen and (max-width: 616px) {
+
+        flex-direction: row;
+        align-items: center;
+        max-width: none;
+
+
+        .section-info-item__image {
+
+            width: 45px;
+            height: 45px;
+
+        }
+
+        &:nth-child(odd) {
+
+            .section-info-item__image {
+
+                margin-right: 16px;
+
+            }
+
+            .section-info-item__title {
+
+                text-align: left;
+
+            }
+
+        }
+
+        &:nth-child(even) {
+
+            flex-direction: row-reverse;
+
+            .section-info-item__image {
+
+
+                margin-left: 16px;
+
+            }
+
+            .section-info-item__title {
+
+                text-align: right;
+
+            }
+        }
+    }
 
     &__image {
 
         background: url('/images/section-info-item__image.png') no-repeat center / contain;
         width: 94px;
         height: 94px;
+        flex-shrink: 0;
         margin-bottom: 54px;
+
+        @media screen and (max-width: 616px) {
+
+            margin-bottom: 0;
+
+        }
+    }
+
+    &__wrapper-title {
+
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+
+        .section-info-item__title {
+
+            margin-bottom: 0;
+            text-align: left;
+
+        }
+
+    }
+
+    &__info {
+
+        font-size: 42px;
+        font-weight: bold;
+        text-transform: uppercase;
+        line-height: 0.3px;
+        letter-spacing: -3.15px;
+        margin-right: 10px;
 
     }
 
@@ -139,23 +272,36 @@
         font-size: 18px;
         text-transform: uppercase;
         text-align: center;
-        margin-bottom: 20px;
+        letter-spacing: 0.83px;
+        margin: 0 0 20px;
 
     }
 
     &__description {
 
         font-size: 17px;
+        letter-spacing: .6px;
         text-align: center;
 
-    }
+        @media screen and (max-width: 616px) {
 
+            display: none;
+
+        }
+    }
 }
 
 .section-purpose {
 
     display: flex;
     margin-top: 120px;
+
+    @media screen and (max-width: 916px) {
+
+        flex-direction: column;
+        margin-top: 10px;
+
+    }
 
     &__image {
 
@@ -164,7 +310,14 @@
         height: 480px;
         background: url('/images/section-purpose__image.png') no-repeat center / cover;
         flex-shrink: 0;
-        margin-right: 20px;
+        margin-right: 33px;
+
+        @media screen and (max-width: 916px) {
+
+            max-width: none;
+            height: 312px;
+
+        }
 
     }
 
@@ -173,25 +326,37 @@
         display: flex;
         flex-direction: column;
 
+        @media screen and (max-width: 916px) {
+
+            box-sizing: border-box;
+            padding: 20px;
+
+        }
+
     }
 
     &__content {
 
         display: flex;
         margin-top: 25px;
+        margin-bottom: 38px;
 
     }
 
     &__column {
 
         margin-right: 20px;
+        line-height: 1.24;
 
         &:last-child {
 
-            margin-right: 0
+            margin-right: 0;
 
+            @media screen and (max-width: 1198px) {
+
+                display: none;
+
+            }
         }
-
     }
-
 }

@@ -2,14 +2,26 @@
 
 import Swiper from 'swiper/dist/js/swiper.min.js';
 
+let burger = document.querySelector('#header__menu-btn');
+let menu = document.querySelector('.header-nav');
+
+burger.addEventListener('click', _ => {
+    let burgerBtn = burger.querySelector('.hamburger');
+
+    burgerBtn.classList.toggle('is-active');
+    menu.classList.toggle('header-nav_active')
+});
+
 let swiperMain = new Swiper('.section-swiper', {
     wrapperClass: 'section-swiper__wrapper',
     slideClass: 'section-swiper__slide',
     slidesPerView: 1,
 
     autoplay: {
-        //delay: 9500,
+        delay: 9500,
     },
+
+    loop: true,
 
     navigation: {
         nextEl: '.section-swiper__next',

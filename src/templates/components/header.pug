@@ -4,9 +4,29 @@ header.header
 
         .header__wrapper-left
 
-            .header__logo
+            a(href="/index.html").header__logo
+
+            #header__menu-btn.button-menu.button-menu_header
+
+                button(type="button").hamburger.hamburger--spin
+
+                    span.hamburger-box
+
+                        span.hamburger-inner
 
             nav.header__nav.header-nav
+
+                .header-nav__wrapper-title
+
+                    .button-menu.button-menu_header
+
+                        button(type="button").hamburger.hamburger--spin
+
+                            span.hamburger-box
+
+                                span.hamburger-inner
+
+                    .header-nav__title Меню
 
                 -
                     var list = ["О нас", "Продукция", "Контакты"]

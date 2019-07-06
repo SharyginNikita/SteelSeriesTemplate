@@ -105,7 +105,7 @@ eval("/**\n * Swiper 4.5.0\n * Most modern mobile touch slider and framework wit
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _swiperMin = _interopRequireDefault(__webpack_require__(/*! swiper/dist/js/swiper.min.js */ \"./node_modules/swiper/dist/js/swiper.min.js\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\n\nvar swiperMain = new _swiperMin[\"default\"]('.section-swiper', {\n  wrapperClass: 'section-swiper__wrapper',\n  slideClass: 'section-swiper__slide',\n  slidesPerView: 1,\n  autoplay: {//delay: 9500,\n  },\n  navigation: {\n    nextEl: '.section-swiper__next',\n    prevEl: '.section-swiper__prev'\n  },\n  pagination: {\n    el: '.section-swiper__pagination',\n    type: 'bullets',\n    bulletClass: 'section-swiper__bullet',\n    bulletActiveClass: 'section-swiper__bullet_active'\n  }\n});\n/*\n \nimport yuor vue modules example\n\nimport Module from '../widgets/module';\nconst module = new Module('#module-widget');\n\n*/\n\n//# sourceURL=webpack:///./src/js/main.js?");
+eval("\n\nvar _swiperMin = _interopRequireDefault(__webpack_require__(/*! swiper/dist/js/swiper.min.js */ \"./node_modules/swiper/dist/js/swiper.min.js\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\n\nvar burger = document.querySelector('#header__menu-btn');\nvar menu = document.querySelector('.header-nav');\nburger.addEventListener('click', function (_) {\n  var burgerBtn = burger.querySelector('.hamburger');\n  burgerBtn.classList.toggle('is-active');\n  menu.classList.toggle('header-nav_active');\n});\nvar swiperMain = new _swiperMin[\"default\"]('.section-swiper', {\n  wrapperClass: 'section-swiper__wrapper',\n  slideClass: 'section-swiper__slide',\n  slidesPerView: 1,\n  autoplay: {\n    delay: 9500\n  },\n  loop: true,\n  navigation: {\n    nextEl: '.section-swiper__next',\n    prevEl: '.section-swiper__prev'\n  },\n  pagination: {\n    el: '.section-swiper__pagination',\n    type: 'bullets',\n    bulletClass: 'section-swiper__bullet',\n    bulletActiveClass: 'section-swiper__bullet_active'\n  }\n});\n/*\r\n \r\nimport yuor vue modules example\r\n\r\nimport Module from '../widgets/module';\r\nconst module = new Module('#module-widget');\r\n\r\n*/\n\n//# sourceURL=webpack:///./src/js/main.js?");
 
 /***/ }),
 
@@ -116,7 +116,7 @@ eval("\n\nvar _swiperMin = _interopRequireDefault(__webpack_require__(/*! swiper
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__(/*! /usr/local/www/sites/SteelSeriesTemplate/src/js/main.js */\"./src/js/main.js\");\n\n\n//# sourceURL=webpack:///multi_./src/js/main.js?");
+eval("module.exports = __webpack_require__(/*! G:\\project\\SteelSeriesTemplate\\src\\js\\main.js */\"./src/js/main.js\");\n\n\n//# sourceURL=webpack:///multi_./src/js/main.js?");
 
 /***/ })
 

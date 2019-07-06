@@ -20,6 +20,12 @@ a {
     align-items: center;
     padding-bottom: 95px;
 
+    @media screen and (max-width: 916px) {
+
+        padding-bottom: 0;
+
+    }
+
     &__wrapper {
 
         display: flex;
@@ -36,6 +42,14 @@ a {
         flex-direction: column;
         width: 100%;
         max-width: $width-container;
+        padding: 11px 20px 20px;
+        box-sizing: border-box;
+
+        @media screen and (max-width: 916px) {
+
+            padding: 11px 0;
+    
+        }
 
     }
 }

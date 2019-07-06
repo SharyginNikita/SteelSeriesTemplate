@@ -4,23 +4,31 @@ footer.footer
 
         .footer__menu
 
-            nav.footer__nav.footer-nav
+            .footer__menu-wrapper
 
-                -
-                    var list = ["О нас", "Продукция", "Контакты"]
+                .footer__section-title разделы
 
-                each item in list
+                nav.footer__nav.footer-nav
 
-                    a.footer-nav__link(href="#")= item
+                    -
+                        var list = ["О нас", "Продукция", "Контакты"]
 
-            nav.footer__nav.footer-nav
+                    each item in list
 
-                -
-                    var list = ["Вся продукция", "Ножи промышленные", "Гильотины", 'Заточенные', 'Пилы']
+                        a.footer-nav__link(href="#")= item
 
-                each item in list
+            .footer__menu-wrapper
+            
+                .footer__section-title каталог
 
-                    a.footer-nav__link(href="#")= item
+                nav.footer__nav.footer-nav
+
+                    -
+                        var list = ["Вся продукция", "Ножи промышленные", "Гильотины", 'Заточенные', 'Пилы']
+
+                    each item in list
+
+                        a.footer-nav__link(href="#")= item
 
         .footer__contact.footer-contact
 

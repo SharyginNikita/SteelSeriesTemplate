@@ -6,5 +6,136 @@
 
 }
 
+.buttons-contact {
+
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 496px) {
+
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+    &__button {
+
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-right: 47px;
+        font-size: 17px;
+        cursor: pointer;
+        transition: .6s ease;
+
+        &:last-child {
+
+            margin: 0;
+
+        }
+
+        &:hover {
+
+            color: $color-green;
+            fill: $color-green;
+            transition: .6s ease;
+
+        }
+
+        @media screen and (max-width: 496px) {
+
+            margin-right: 0;
+            margin-bottom: 20px;
+
+        }
+
+        #Capa_1 {
+
+            width: 32px;
+            height: 32px;
+            margin-right: 14px;
+
+        }
+
+        #Capa_2 {
+
+            width: 30px;
+            height: 26px;
+            margin-right: 14px;
+
+        }
+    }
+}
+
+.button-menu {
+
+    display: none;
+    width: 27px;
+    height: 19px;
+    z-index: 5;
+
+    .hamburger {
+
+        padding: 0;
+        width: 27px;
+        height: 19px;
+
+        &-box {
+
+            width: 27px;
+            height: 19px;
+
+        }
+
+        &-inner {
+
+            height: 3px;
+            width: 100%;
+
+            &:after,
+            &:before {
+
+                height: 3px;
+                width: 100% !important;
+
+
+            }
+
+            &:after {
+
+                bottom: -7px;
+
+            }
+
+            &:before {
+
+                top: -7px;
+
+            }
+
+        }
+
+    }
+
+    @media screen and (max-width: 1056px) {
+
+        display: block;
+
+    }
+}
+
+#header__menu-btn {
+
+    .is-active {
+
+        position: fixed;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+
+    }
+}
+
+
 // use BAM modifier
- 
