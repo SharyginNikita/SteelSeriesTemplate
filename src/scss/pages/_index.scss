@@ -80,11 +80,21 @@
         z-index: 3;
         cursor: pointer;
 
+        &:active,
+        &:focus {
+            outline: none;
+        }
+
+        &:-moz-focus-inner {
+            border: 0;
+        }
+
         @media screen and (max-width: 1198px) {
 
             bottom: 80px;
             width: auto;
-            padding: 0 0 0 20px;
+            margin: 0 0 0 20px;
+            padding: 0;
 
         }
     }
@@ -135,12 +145,12 @@
         z-index: 3;
         border-radius: 50%;
         background-color: #dcdcdc;
-        transition: .6s ease;
+        transition: .3s ease;
 
         &_active {
 
             background-color: $color-green;
-            transition: .6s ease;
+            transition: .3s ease;
 
         }
 
@@ -347,6 +357,12 @@
 
         margin-right: 20px;
         line-height: 1.24;
+
+        @media screen and (max-width: 1198px) {
+
+            margin-right: 0;
+
+        }
 
         &:last-child {
 

@@ -1,0 +1,121 @@
+.contacts {
+
+    display: flex;
+    width: 100%;
+
+    @media screen and (max-width: 846px) {
+
+        flex-direction: column-reverse;
+        
+    }
+
+    &__map {
+
+        max-width: 1005px;
+        width: 100%;
+        min-height: 738px;
+        background-color: $color-gray;
+        margin-right: 40px;
+
+        @media screen and (max-width: 1046px) {
+
+            height: 550px;
+            min-height: auto;
+            
+        }
+
+        @media screen and (max-width: 846px) {
+
+           height: 346px;
+            
+        }   
+
+    }
+
+    &__content {
+
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        padding-right: 100px;
+
+        @media screen and (max-width: 846px) {
+
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 20px 30px 20px;
+            
+        }
+
+    }
+
+    &__row {
+
+        display: flex;
+        margin-bottom: 57px;
+
+        @media screen and (max-width: 846px) {
+
+            justify-content: space-between;
+             
+         }   
+
+        &:last-child {
+    
+            margin-bottom: 0;
+    
+        }
+
+    }
+
+}
+
+.contacts-item {
+
+    display: flex;
+    flex-direction: column;
+    margin-right: 106px;
+
+    @media screen and (max-width: 846px) {
+
+        margin-right: 5px;
+         
+     }   
+
+    &:last-child {
+
+        margin-right: 0;
+
+    }
+
+
+    &__title {
+
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 7px;
+        text-transform: uppercase;
+
+    }
+
+    &__description {
+
+        font-size: 17px;
+        max-width: 340px;
+
+    }
+
+    &__social-icon {
+
+        width: 40px;
+        height: 40px;
+        background: url('../images/icons/vk.png') no-repeat center / cover;
+        margin-right: 15px;
+
+        &:last-child {
+
+            margin-right: 0;
+
+        }
+    }
+}

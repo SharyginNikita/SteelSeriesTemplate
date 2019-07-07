@@ -1,0 +1,69 @@
+doctype html
+html(lang="ru")
+
+    head
+
+        title myStartTemplate
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="msapplication-TileColor" content="#ffffff")
+        //meta(name="msapplication-TileImage" content="/images/faviocns/ms-icon-144x144.png")
+        meta(name="theme-color" content="#ffffff")
+        link(rel="stylesheet" href="./css/main.css")
+
+    body.body
+
+        include components/header
+
+        main.main
+
+            section.contacts
+
+                .contacts__map
+
+                .contacts__content
+
+                    .contacts__row
+
+                        .contacts__item.contacts-item
+
+                            .contacts-item__title Фактический адрес:
+
+                            .contacts-item__description Санкт-Петербург, ул. Ново-Александровская, д.14 (ст.м. Пролетарская)
+
+                    .contacts__row
+
+                        .contacts__item.contacts-item
+
+                            .contacts-item__title Телефон:
+
+                            .contacts-item__description  +7 (812) 380 85 32
+
+                        .contacts__item.contacts-item
+
+                            .contacts-item__title Факс:
+
+                            .contacts-item__description +7 (812) 380 85 32
+
+                    .contacts__row
+
+                        .contacts__item.contacts-item
+
+                            .contacts-item__title E-mail:
+
+                            .contacts-item__description sales@bktforsunka.ru
+
+                    .contacts__row
+
+                        .contacts__item.contacts-item
+
+                            .contacts-item__title Соц. Сети:
+
+                            .contacts-item__social-icon
+
+                    include components/btn-contact.pug
+
+        include components/footer.pug
+
+    script(src="./js/main.js")
