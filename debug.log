@@ -1,0 +1,16 @@
+[0706/220806.579:WARNING:thread_snapshot_minidump.cc(89)] Snapshot X86 context support has no unit tests.
+[0706/220806.581:WARNING:thread_snapshot_minidump.cc(89)] Snapshot X86 context support has no unit tests.
+[0706/220806.581:WARNING:thread_snapshot_minidump.cc(89)] Snapshot X86 context support has no unit tests.
+[0706/220806.581:WARNING:thread_snapshot_minidump.cc(89)] Snapshot X86 context support has no unit tests.
+[0706/220806.581:WARNING:thread_snapshot_minidump.cc(89)] Snapshot X86 context support has no unit tests.
+[0706/220806.581:WARNING:thread_snapshot_minidump.cc(89)] Snapshot X86 context support has no unit tests.
+[0706/220806.581:WARNING:thread_snapshot_minidump.cc(89)] Snapshot X86 context support has no unit tests.
+[0706/220806.582:WARNING:thread_snapshot_minidump.cc(89)] Snapshot X86 context support has no unit tests.
+[0706/220806.582:WARNING:thread_snapshot_minidump.cc(89)] Snapshot X86 context support has no unit tests.
+[0706/220806.582:WARNING:thread_snapshot_minidump.cc(89)] Snapshot X86 context support has no unit tests.
+[0706/220806.582:WARNING:thread_snapshot_minidump.cc(89)] Snapshot X86 context support has no unit tests.
+[0706/220806.582:WARNING:thread_snapshot_minidump.cc(89)] Snapshot X86 context support has no unit tests.
+[0706/220806.583:WARNING:thread_snapshot_minidump.cc(89)] Snapshot X86 context support has no unit tests.
+[0706/220806.583:WARNING:thread_snapshot_minidump.cc(89)] Snapshot X86 context support has no unit tests.
+[0706/220806.583:WARNING:minidump_to_upload_parameters.cc(67)] duplicate annotation name metrics_client_id, discarding value 64213609027d4c5bacc893280681582e
+[0706/220810.030:ERROR:crash_report_database_win.cc(828)] DeleteFile C:\Users\Р›СЋРґРјРёР»Р°\AppData\Local\Yandex\YandexBrowser\User Data\Crashpad\reports\adee5551-a89c-49e4-8d34-db434204d421.dmp: Процесс не может получить доступ к файлу, так как этот файл занят другим процессом. (0x20)

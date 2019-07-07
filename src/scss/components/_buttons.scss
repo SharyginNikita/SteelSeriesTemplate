@@ -80,6 +80,15 @@
         width: 27px;
         height: 19px;
 
+        &:active,
+        &:focus {
+            outline: none;
+        }
+
+        &:-moz-focus-inner {
+            border: 0;
+        }
+
         &-box {
 
             width: 27px;
