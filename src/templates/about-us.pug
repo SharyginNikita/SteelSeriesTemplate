@@ -103,11 +103,17 @@ html(lang="ru")
 
                             .section-production-tiles__item
 
-                    section.section.section-partners
+                section.section.section-partners
 
-                        .section-partners__wrapper
+                    h2.title.title_h2 Качество, которому доверяют
 
-                            h2.title.title_h2 Качество, которому доверяют
+                    .section-partners__wrapper
+
+                        - for (var x = 0; x < 15; x++)
+
+                            .section-partners__item
+
+                                .section-partners__item-image
 
         include components/footer.pug
 
