@@ -4,7 +4,7 @@ header.header
 
         .header__wrapper-left
 
-            a(href="/index.html").header__logo
+            a(href="./index.html").header__logo
 
             #header__menu-btn.button-menu.button-menu_header
 
@@ -28,12 +28,11 @@ header.header
 
                     .header-nav__title Меню
 
-                -
-                    var list = ["О нас", "Продукция", "Контакты"]
+                a(href="./about-us.html").header-nav__link О нас
 
-                each item in list
+                a(href="./products.html").header-nav__link.header-nav__link_active Продукция
 
-                    a.header-nav__link(href="#")= item
+                a(href="./contacts.html").header-nav__link Контакты
 
         .header__contacts.header-contacts
 
