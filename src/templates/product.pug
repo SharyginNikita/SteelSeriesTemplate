@@ -1,0 +1,108 @@
+doctype html
+html(lang="ru")
+
+    head
+
+        title myStartTemplate
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1.0")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="msapplication-TileColor" content="#ffffff")
+        //meta(name="msapplication-TileImage" content="/images/faviocns/ms-icon-144x144.png")
+        meta(name="theme-color" content="#ffffff")
+        link(rel="stylesheet" href="./css/main.css")
+
+    body.body
+
+        include components/header
+
+        main.main
+
+            .main__wrapper
+
+                .product
+
+                    .product__wrapper
+
+                        .product__row
+
+                            h1.title.title_h2 Гильотины для бумагообрезательных машин
+
+                            .product__link-donwload Скачать каталог
+
+                        .product__text
+
+                            |Lorem i adipisci velit, sed quia non numquam eius modi tempora incidunt ut
+                            |labore et dolore magnam aliquam quaerat voluptatem.
+
+                        .product__link-back назад
+
+                        .product__info
+
+                            h2.product__info-title Конструктивные особенности и преимущества
+
+                            ul.product__info-list
+
+                                li.product__info-item Области применения форсунок: процессы охлаждения и очитски, борьба с пылеобразованием и в системах пожаротушения
+                                
+                                li.product__info-item Образуется полый спрыск конусобразной формы
+                                
+                                li.product__info-item Эффективная дисперсия жидкости при низких рабочих давлениях
+                                
+                                li.product__info-item Низкая засоряемость форсунки с полым конусом
+                                
+                                li.product__info-item Капли среднего и большого размера благодаря использованию камеры закручивания потока
+                                
+                                li.product__info-item Большой выбор типов форсунок, углов факела распыления, расходов и материалов полоконусных форсунок
+
+                    .product__items
+
+                        .product__item.product-item
+
+                            .product-item__title Полоконусные форсунки со стандартной формой сечения конуса спрыска
+
+                            .product-item__wrapper
+
+                                .product-item__description
+
+                                    .product-item__description-image
+
+                                    .product-item__description-content
+
+                                        .product-item__description-flag
+
+                                            .product-item__description-flag-symbol F
+
+                                            .product-item__description-flag-text - внутренняя резьба
+
+                                        .product-item__description-flag
+
+                                            .product-item__description-flag-symbol M
+
+                                            .product-item__description-flag-text - наружная резьба
+
+                                        .product-item__description-flag
+
+                                            .product-item__description-flag-symbol Fl
+
+                                            .product-item__description-flag-text - фланцевое
+
+                                        .product-item__description-flag
+
+                                            .product-item__description-flag-symbol T
+
+                                            .product-item__description-flag-text - шланг
+
+                                    .product-item__grid
+
+                                        - for (var x = 0; x < 12; x++)
+
+                                            .product-item__subitem
+                                                
+                                                .product-item__subitem-image 
+                                                    
+                                                .product-item__subitem-title Корпус с заглушкой, присоединение 1/4" внутренняя резьба
+
+        include components/footer.pug
+
+    script(src="./js/main.js")
