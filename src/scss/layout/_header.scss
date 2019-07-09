@@ -137,6 +137,8 @@
         text-decoration: none;
         margin-right: 55px;
         transition: .3s ease;
+        box-sizing: border-box;
+        padding: 0 3px;
 
         @media screen and (max-width: 1056px) {
 
@@ -198,6 +200,8 @@
         margin-right: 33px;
         border-bottom: 1px solid transparent;
         transition: .3s ease;
+        box-sizing: border-box;
+        padding: 0 3px;
 
         &:hover {
 
