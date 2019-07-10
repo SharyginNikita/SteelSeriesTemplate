@@ -1,9 +1,31 @@
 .button {
 
     display: flex;
+    align-items: center;
+    justify-content: center;
     box-sizing: border-box;
     cursor: pointer;
 
+    &_send {
+    
+        max-width: 250px;
+        background-color: $color-green;
+        padding: 28px 5px;
+        border-radius: 35px;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 0 auto;
+        transition: .3s ease;
+
+        &:hover {
+       
+            transition: .3s ease;
+            background-color: $color-green-lg;
+        
+        }
+    }
 }
 
 .buttons-contact {

@@ -28,7 +28,7 @@
         align-items: center;
 
         @media screen and (max-width: 1116px) {
-            
+
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -46,8 +46,8 @@
     &__link-download {
 
         @media screen and (max-width: 1116px) {
-            
-           margin-top: 10px;
+
+            margin-top: 10px;
 
         }
 
@@ -84,8 +84,6 @@
 
             }
         }
-
-
     }
 
     &__info {
@@ -137,23 +135,46 @@
     flex-direction: column;
     margin-bottom: 150px;
 
-    &:last-child {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 20px 0;
+    transition: .3s ease;
+    cursor: pointer;
 
-        margin-bottom: 0;
+    &:hover {
+        .arrow {
+            &:after {
+                border-color: $color-green;
+                transition: .3s ease;
+            }
+        }
+    }
 
-        border-top: 1px solid #000;
-        border-bottom: 1px solid #000;
-        padding: 20px 0;
 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    &_active {
+
+        border-color: transparent;
+        transition: .3s ease;
 
         .product-item__title {
 
             margin: 0;
 
         }
+
+        .arrow {
+        
+            transform: rotateZ(-135deg);
+            transition: .3s ease;
+        
+        }
+    }
+
+    &:last-child {
+
+        margin-bottom: 0;
+
+
     }
 
     &__row {
@@ -163,7 +184,7 @@
         width: 100%;
 
         @media screen and (max-width: 676px) {
-            
+
             .arrow {
 
                 display: none;
@@ -184,7 +205,7 @@
         margin-bottom: 30px;
 
         @media screen and (max-width: 676px) {
-            
+
             font-size: 17px;
 
         }
@@ -194,9 +215,12 @@
     &__wrapper {
 
         display: flex;
+        height: 0;
+        overflow: hidden;
+        transition: .3s ease;
 
         @media screen and (max-width: 676px) {
-            
+
             flex-direction: column;
 
         }
@@ -213,7 +237,7 @@
         margin-right: 20px;
 
         @media screen and (max-width: 676px) {
-            
+
             margin: 0 0 20px 0;
 
         }
@@ -256,7 +280,7 @@
         margin-bottom: 40px;
 
         @media screen and (max-width: 676px) {
-            
+
             grid-template-columns: 1fr;
 
         }
@@ -271,14 +295,14 @@
         gap: 25px 40px;
 
         @media screen and (max-width: 1116px) {
-            
+
             grid-template-columns: repeat(3, 1fr);
             gap: 15px 20px;
 
         }
 
         @media screen and (max-width: 676px) {
-            
+
             grid-template-columns: repeat(2, 1fr);
 
         }
@@ -298,9 +322,9 @@
             margin-bottom: 19px;
 
             @media screen and (max-width: 676px) {
-            
+
                 height: 130px;
-    
+
             }
 
         }
@@ -308,9 +332,9 @@
         &-title {
 
             @media screen and (max-width: 676px) {
-            
+
                 font-size: 12px;
-    
+
             }
 
         }
