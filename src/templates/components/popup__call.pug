@@ -1,0 +1,49 @@
+.popup
+
+    .popup__content
+
+        .popup__item.popup__item_column
+
+            label(for="input_1").popup__label Ваш Телефон
+
+            input(type="text" placeholder="+7 (***)  **-**-***" id="input_1").popup__input.phone-mask
+
+        .popup__item.popup__item_column
+
+            .popup__label Удобное время для звонка
+
+            .popup__row.popup__row_between
+
+                .popup__select-wrapper
+
+                    .popup__select-text с
+
+                    select.popup__select
+                        option 09.00
+                        option 10.00
+
+                .popup__select-wrapper
+
+                    .popup__select-text до
+
+                    select.popup__select
+                        option 09.00
+                        option 10.00
+
+        .popup__item.popup__item_row
+
+            .popup__checkbox-wrapper
+
+                label.checkbox-label
+
+                    input(type="checkbox")
+
+                    span.checkbox-custom.rectangular
+
+            .popup__agree Я согласен на 
+
+                a(href="#").popup__agree-link обработку персональных данных
+
+        .button.button_send Отправить заявку
+
+

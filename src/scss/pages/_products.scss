@@ -133,6 +133,7 @@
 
 .section-products-catalog {
 
+    display: none;
     flex-grow: 1;
     display: grid;
     grid-template-columns: repeat(2, 1fr);

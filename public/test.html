@@ -31,17 +31,12 @@
         <div class="main__wrapper">
             <div class="popup">
                 <div class="popup__content">
-                    <div class="popup__item popup__item_column">
-                        <div class="popup__title">Ваш EMail</div><input class="popup__input" type="text" placeholder="***@***">
-                    </div>
-                    <div class="popup__item popup__item_column">
-                        <div class="popup__title">Ваш вопрос</div><input class="popup__input" type="text" placeholder="Введите текст">
-                    </div>
-                    <div class="popup__item popup__item_column">
-                        <div class="popup__title">Можете прикрепить файл</div><input class="popup__input" type="file">
-                    </div>
-                    <div class="popup__item popup__item_row"><input type="checkbox">
-                        <div class="popup__agree">Я согласен на обработку персональных данных</div>
+                    <div class="popup__item popup__item_column"><label class="popup__label" for="input_1">Ваш EMail</label><input class="popup__input" type="text" placeholder="***@***" id="input_1"></div>
+                    <div class="popup__item popup__item_column"><label class="popup__label" for="input_2">Ваш вопрос</label><input class="popup__input" type="text" placeholder="Введите текст" id="input_2"></div>
+                    <div class="popup__item popup__item_column"><label class="popup__label" for="input_3">Можете прикрепить файл</label><input class="popup__input popup__input_file" type="file" id="input_3" multiple></div>
+                    <div class="popup__item popup__item_row">
+                        <div class="popup__checkbox-wrapper"><label class="checkbox-label"><input type="checkbox"><span class="checkbox-custom rectangular"></span></label></div>
+                        <div class="popup__agree">Я согласен на <a class="popup__agree-link" href="#">обработку персональных данных</a></div>
                     </div>
                     <div class="button button_send">Отправить заявку</div>
                 </div>

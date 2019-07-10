@@ -4810,6 +4810,11 @@ imask@^5.1.6:
   version "5.1.6"
   resolved "https://registry.yarnpkg.com/imask/-/imask-5.1.6.tgz#8f722e885ec77e96f24736df18cb492587733d6f"
 
+imask@^5.1.7:
+  version "5.1.7"
+  resolved "https://registry.yarnpkg.com/imask/-/imask-5.1.7.tgz#ef691aba65a188e73a6dc0d02e5d05b081af34fd"
+  integrity sha512-u/6x6qEua2ADe3i+vW19OIfsgNpn+cM3vr9UBNTDilNKX2qKxos7OVNcrrdVwJHKaUmDmBqD+mJXirTuqwV+jg==
+
 immutable@^3:
   version "3.8.2"
   resolved "https://registry.yarnpkg.com/immutable/-/immutable-3.8.2.tgz#c2439951455bb39913daf281376f1530e104adf3"

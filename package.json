@@ -35,6 +35,7 @@
         "hamburgers": "^1.1.3",
         "imagemin-mozjpeg": "^8.0.0",
         "imagemin-webpack": "^4.1.0",
+        "imask": "^5.1.7",
         "jsonpatch": "^3.0.1",
         "popup": "ssh://git@gitea.websm.io:2222/websm/popup.js.git",
         "pug-plain-loader": "^1.0.0",
