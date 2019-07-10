@@ -4,28 +4,36 @@
 
         .popup__item.popup__item_column
 
-            .popup__title Ваш E-Mail
+            label(for="input_1").popup__label Ваш EMail
 
-            input(type="text").popup__input
-
-        .popup__item.popup__item_column
-
-            .popup__title Ваш вопрос
-
-            input(type="text").popup__input
+            input(type="text" placeholder="***@***" id="input_1").popup__input
 
         .popup__item.popup__item_column
 
-            .popup__title Можете прикрепить файл
+            label(for="input_2").popup__label Ваш вопрос
 
-            input(type="text").popup__input
+            input(type="text" placeholder="Введите текст" id="input_2").popup__input
+
+        .popup__item.popup__item_column
+
+            label(for="input_3").popup__label Можете прикрепить файл
+
+            input(type="file" id="input_3" multiple).popup__input.popup__input_file
 
         .popup__item.popup__item_row
 
-            input(type="checkbox")
+            .popup__checkbox-wrapper
 
-            .popup__agree Я согласен на обработку персональных данных
+                label.checkbox-label
 
-        .button.button__send Отправить заявку
+                    input(type="checkbox")
+
+                    span.checkbox-custom.rectangular
+
+            .popup__agree Я согласен на 
+
+                a(href="#").popup__agree-link обработку персональных данных
+
+        .button.button_send Отправить заявку
 
 

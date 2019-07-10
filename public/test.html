@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-    <title>myStartTemplate</title>
+    <title>БКТ</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,13 +15,13 @@
 <body class="body">
     <header class="header">
         <div class="header__wrapper">
-            <div class="header__wrapper-left"><a class="header__logo" href="/index.html"></a>
+            <div class="header__wrapper-left"><a class="header__logo" href="./index.html"></a>
                 <div class="button-menu button-menu_header" id="header__menu-btn"><button class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button></div>
                 <nav class="header__nav header-nav">
                     <div class="header-nav__wrapper-title">
                         <div class="button-menu button-menu_header"><button class="hamburger hamburger--spin" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button></div>
                         <div class="header-nav__title">Меню</div>
-                    </div><a class="header-nav__link" href="#">О нас</a><a class="header-nav__link" href="#">Продукция</a><a class="header-nav__link" href="#">Контакты</a>
+                    </div><a class="header-nav__link" href="./about-us.html">О нас</a><a class="header-nav__link header-nav__link_active" href="./products.html">Продукция</a><a class="header-nav__link" href="./contacts.html">Контакты</a>
                 </nav>
             </div>
             <div class="header__contacts header-contacts"><a class="header-contacts__link" href="tel: +7 (812) 380 85 32">+7 (812) 380 85 32;</a><a class="header-contacts__link" href="mailTo: sales@bktforsunka.ru">sales@bktforsunka.ru</a></div>
@@ -29,23 +29,16 @@
     </header>
     <main class="main">
         <div class="main__wrapper">
-            <div class="products">
-                <div class="products__wrapper">
-                    <h2 class="title title_h2">Продукция</h2>
-                    <div class="products__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                        nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit
-                        voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
-                        ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                        Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-                        sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-                        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-                        adipisci velit, sed quia non numquam eius modi tempora incidunt ut
-                        labore et dolore magnam aliquam quaerat voluptatem.</div>
+            <div class="popup">
+                <div class="popup__content">
+                    <div class="popup__item popup__item_column"><label class="popup__label" for="input_1">Ваш EMail</label><input class="popup__input" type="text" placeholder="***@***" id="input_1"></div>
+                    <div class="popup__item popup__item_column"><label class="popup__label" for="input_2">Ваш вопрос</label><input class="popup__input" type="text" placeholder="Введите текст" id="input_2"></div>
+                    <div class="popup__item popup__item_column"><label class="popup__label" for="input_3">Можете прикрепить файл</label><input class="popup__input popup__input_file" type="file" id="input_3" multiple></div>
+                    <div class="popup__item popup__item_row">
+                        <div class="popup__checkbox-wrapper"><label class="checkbox-label"><input type="checkbox"><span class="checkbox-custom rectangular"></span></label></div>
+                        <div class="popup__agree">Я согласен на <a class="popup__agree-link" href="#">обработку персональных данных</a></div>
+                    </div>
+                    <div class="button button_send">Отправить заявку</div>
                 </div>
             </div>
         </div>
@@ -73,5 +66,6 @@
     </footer>
 </body>
 <script src="./js/main.js"></script>
+<script src="./js/product.js"></script>
 
 </html>
