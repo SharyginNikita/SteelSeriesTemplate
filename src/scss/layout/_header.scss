@@ -141,6 +141,7 @@
         line-height: 1.7;
         padding: 0 3px;
         padding-bottom: 3px;
+        transition: .3s ease;
 
         @media screen and (max-width: 1056px) {
 
@@ -165,6 +166,7 @@
             border-bottom: 5px solid $color-green;
             font-weight: 700;
             color: $color-green;
+            transition: .3s ease;
 
         }
 

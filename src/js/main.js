@@ -23,7 +23,7 @@ let swiperMain = new Swiper('.section-swiper', {
         delay: 9500,
     },
 
-  
+
 
     loop: true,
 
@@ -47,8 +47,8 @@ buttonsRequest.forEach(btn => {
 
     btn.addEventListener('click', _ => {
 
-        let communication = 
-    
+        let communication =
+
             `
             <div class="popup">
             <div class="popup__content">
@@ -68,39 +68,39 @@ buttonsRequest.forEach(btn => {
                 <div class="button button_send">Отправить заявку</div>
             </div>
         </div>
-    `
-        ;
-    
-        popup.insertData(communication); 
-        ;( function ( document, window, index )
-    {
-        var inputs = document.querySelectorAll( '.inputfile' );
-        Array.prototype.forEach.call( inputs, function( input )
-        {
-            var label	 = input.nextElementSibling,
-                labelVal = label.innerHTML;
-    
-            input.addEventListener( 'change', function( e )
-            {
-                var fileName = '';
-                if( this.files && this.files.length > 1 )
-                    fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
-                else
-                    fileName = e.target.value.split( '\\' ).pop();
-    
-                if( fileName )
-                    label.querySelector( 'span' ).innerHTML = fileName;
-                else
-                    label.innerHTML = labelVal;
+    `;
+
+        popup.insertData(communication);;
+        (function (document, window, index) {
+            var inputs = document.querySelectorAll('.inputfile');
+            Array.prototype.forEach.call(inputs, function (input) {
+                var label = input.nextElementSibling,
+                    labelVal = label.innerHTML;
+
+                input.addEventListener('change', function (e) {
+                    var fileName = '';
+                    if (this.files && this.files.length > 1)
+                        fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+                    else
+                        fileName = e.target.value.split('\\').pop();
+
+                    if (fileName)
+                        label.querySelector('span').innerHTML = fileName;
+                    else
+                        label.innerHTML = labelVal;
+                });
+
+                // Firefox bug fix
+                input.addEventListener('focus', function () {
+                    input.classList.add('has-focus');
+                });
+                input.addEventListener('blur', function () {
+                    input.classList.remove('has-focus');
+                });
             });
-    
-            // Firefox bug fix
-            input.addEventListener( 'focus', function(){ input.classList.add( 'has-focus' ); });
-            input.addEventListener( 'blur', function(){ input.classList.remove( 'has-focus' ); });
-        });
-    }( document, window, 0 ));
+        }(document, window, 0));
         popup.open();
-    
+
     });
 })
 
@@ -108,12 +108,12 @@ buttonsRequest.forEach(btn => {
 let buttonsCall = document.querySelectorAll('.buttons-contact__button_call, .footer-contact__link_call');
 console.log(buttonsCall);
 buttonsCall.forEach(btn => {
-    
-btn.addEventListener('click', _ => {
 
-    let communication = 
+    btn.addEventListener('click', _ => {
 
-        `
+        let communication =
+
+            `
 
 <div class="popup">
     <div class="popup__content">
@@ -141,21 +141,19 @@ btn.addEventListener('click', _ => {
         </div>
         <div class="button button_send">Отправить заявку</div>
     </div>
-</div>`
-;
+</div>`;
 
-    popup.insertData(communication);
-    let mask = document.querySelector('.phone-mask');
-    let phoneMask = IMask(
-        mask, {
-            mask: '+{7} (000) 000-00-00',
-            lazy: false,
-            placeholderChar: '*' 
-        });
-    popup.open();
+        popup.insertData(communication);
+        let mask = document.querySelector('.phone-mask');
+        let phoneMask = IMask(
+            mask, {
+                mask: '+{7} (000) 000-00-00',
+                lazy: false,
+                placeholderChar: '*'
+            });
+        popup.open();
 
-});
-
+    });
 })
 
 
@@ -172,35 +170,35 @@ if (getClientWidth() <= 656) {
     let div = document.createElement('div');
     div.className = "section-products__category-item section-products__category-item_active section-products__category-item_title-tab";
     categoryMenu.appendChild(div);
-    
-let titleTab = document.querySelector('.section-products__category-item_title-tab');
-console.log(titleTab);
-if (titleTab) {
-    titleTab.innerHTML = categories[0].innerHTML;
-}
-let category = document.querySelector('.section-products__category');
-titleTab.addEventListener('click', _ => {
-   
-    category.classList.add('section-products__category_active');
-});
-btnClose.addEventListener('click', _ => {
-    category.classList.remove('section-products__category_active');
-});
+
+    let titleTab = document.querySelector('.section-products__category-item_title-tab');
+    console.log(titleTab);
+    if (titleTab) {
+        titleTab.innerHTML = categories[0].innerHTML;
+    }
+    let category = document.querySelector('.section-products__category');
+    titleTab.addEventListener('click', _ => {
+
+        category.classList.add('section-products__category_active');
+    });
+    btnClose.addEventListener('click', _ => {
+        category.classList.remove('section-products__category_active');
+    });
 }
 
-if(categories) {
+if (categories) {
 
-    categories.forEach(function(elem, i) {
+    categories.forEach(function (elem, i) {
 
         elem.setAttribute('data-id', `tab-id-${i}`);
 
         elem.addEventListener('click', _ => {
             let dataId = elem.getAttribute('data-id');
             let tab = document.querySelector('#' + dataId);
-            tabs.forEach(function(tab) {
+            tabs.forEach(function (tab) {
                 tab.classList.remove('section-products-catalog_active');
             });
-            categories.forEach(function(item) {
+            categories.forEach(function (item) {
                 item.classList.remove('section-products__category-item_active');
             });
             elem.classList.add('section-products__category-item_active');
@@ -231,4 +229,3 @@ import Module from '../widgets/module';
 const module = new Module('#module-widget');
 
 */
-

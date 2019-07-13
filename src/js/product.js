@@ -23,7 +23,7 @@ for (let i = 0; i < productItems.length; i++) {
 
             if (itemWrap.style.height == '0px' || itemWrap.style.height == 0 ) {
                 itemWrap.style.height = itemWrap.scrollHeight + 'px';
-                itemWrap.style.margin = '120px 0';
+                itemWrap.style.margin = '25px 0 120px 0';
             }
 
             else {
