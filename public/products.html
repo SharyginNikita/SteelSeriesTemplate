@@ -10,6 +10,7 @@
     <!--meta(name="msapplication-TileImage" content="/images/faviocns/ms-icon-144x144.png")-->
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/custom.css">
 </head>
 
 <body class="body">
@@ -50,17 +51,45 @@
                 <section class="section-products">
                     <div class="section-products__menu">
                         <div class="section-products__category">
-                            <div class="section-products__category-item section-products__category-item_active">Гильотины</div>
+                            <div class="section-products__category-item">Гильотины</div>
                             <div class="section-products__category-item">Дисковые</div>
                             <div class="section-products__category-item">Заточенные</div>
                             <div class="section-products__category-item">Другие</div>
+                            <div class="button-menu button-menu_category" id="section-products__close-btn"><button class="hamburger hamburger--spin is-active" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button></div>
                         </div>
                         <div class="section-products__sort">
                             <div class="section-products__sort-item">сначала крупные</div>
                             <div class="section-products__sort-item">сначала маленькие</div>
                         </div>
                     </div>
-                    <div class="section-products__catalog section-products-catalog"><a class="section-products-catalog__item" href="./product.html">
+                    <div class="section-products__catalog section-products-catalog" id="tab-id-0"><a class="section-products-catalog__item" href="./product.html">
+                            <div class="section-products-catalog__item-wrapper">
+                                <div class="section-products-catalog__item-image"> </div>
+                            </div>
+                            <div class="section-products-catalog__item-title">Для бумагообрезательных машин</div>
+                        </a><a class="section-products-catalog__item" href="./product.html">
+                            <div class="section-products-catalog__item-wrapper">
+                                <div class="section-products-catalog__item-image"> </div>
+                            </div>
+                            <div class="section-products-catalog__item-title">Для каких целей служат эти ножи, или серия или еще что -то, максимум в 2 строки</div>
+                        </a></div>
+                    <div class="section-products__catalog section-products-catalog" id="tab-id-1"><a class="section-products-catalog__item" href="./product.html">
+                            <div class="section-products-catalog__item-wrapper">
+                                <div class="section-products-catalog__item-image"> </div>
+                            </div>
+                            <div class="section-products-catalog__item-title">Для бумагообрезательных машин</div>
+                        </a><a class="section-products-catalog__item" href="./product.html">
+                            <div class="section-products-catalog__item-wrapper">
+                                <div class="section-products-catalog__item-image"> </div>
+                            </div>
+                            <div class="section-products-catalog__item-title">Для каких целей служат эти ножи, или серия или еще что -то, максимум в 2 строки</div>
+                        </a><a class="section-products-catalog__item" href="./product.html">
+                            <div class="section-products-catalog__item-wrapper">
+                                <div class="section-products-catalog__item-image"> </div>
+                            </div>
+                            <div class="section-products-catalog__item-title">Для бумагообрезательных машин</div>
+                        </a></div>
+                    <div class="section-products__catalog section-products-catalog" id="tab-id-2"><a class="section-products-catalog__item" href="./product.html">
                             <div class="section-products-catalog__item-image"></div>
                             <div class="section-products-catalog__item-title">Для бумагообрезательных машин</div>
                         </a><a class="section-products-catalog__item" href="./product.html">
@@ -70,6 +99,23 @@
                             <div class="section-products-catalog__item-image"></div>
                             <div class="section-products-catalog__item-title">Для бумагообрезательных машин</div>
                         </a><a class="section-products-catalog__item" href="./product.html">
+                            <div class="section-products-catalog__item-image"></div>
+                            <div class="section-products-catalog__item-title">Для бумагообрезательных машин<div class="section-products__catalog section-products-catalog" id="tab-id-0"></div>
+                            </div>
+                        </a><a class="section-products-catalog__item" href="./product.html">
+                            <div class="section-products-catalog__item-image"></div>
+                            <div class="section-products-catalog__item-title">Для бумагообрезательных машин</div>
+                        </a><a class="section-products-catalog__item" href="./product.html">
+                            <div class="section-products-catalog__item-image"></div>
+                            <div class="section-products-catalog__item-title">Для каких целей служат эти ножи, или серия или еще что -то, максимум в 2 строки</div>
+                        </a><a class="section-products-catalog__item" href="./product.html">
+                            <div class="section-products-catalog__item-image"></div>
+                            <div class="section-products-catalog__item-title">Для бумагообрезательных машин</div>
+                        </a><a class="section-products-catalog__item" href="./product.html">
+                            <div class="section-products-catalog__item-image"></div>
+                            <div class="section-products-catalog__item-title">Для бумагообрезательных машин</div>
+                        </a></div>
+                    <div class="section-products__catalog section-products-catalog" id="tab-id-3"><a class="section-products-catalog__item" href="./product.html">
                             <div class="section-products-catalog__item-image"></div>
                             <div class="section-products-catalog__item-title">Для бумагообрезательных машин</div>
                         </a></div>
@@ -92,8 +138,8 @@
             <div class="footer__contact footer-contact">
                 <div class="footer-contact__contacts"><a class="footer-contact__contacts-link" href="tel: +7 (812) 380 85 32">+7 (812) 380 85 32 </a><a class="footer-contact__contacts-link" href="tel: +7 (812) 380 85 32">sales@bktforsunka.ru </a></div>
                 <div class="footer-contact__row">
-                    <div class="footer-contact__link">Заказать звонок</div>
-                    <div class="footer-contact__link">Оставить запрос</div>
+                    <div class="footer-contact__link footer-contact__link_call">Заказать звонок</div>
+                    <div class="footer-contact__link footer-contact__link_request">Оставить запрос</div>
                 </div>
             </div>
         </div>

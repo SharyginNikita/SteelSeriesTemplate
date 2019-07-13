@@ -10,11 +10,11 @@
 
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         width: 100%;
         max-width: $width-container;
         box-sizing: border-box;
-        padding: 28px 20px;
+        padding: 28px 20px 20px 63px;
 
         @media screen and (max-width: 1186px) {
 
@@ -40,7 +40,7 @@
     &__menu-wrapper {
 
         display: flex;
-        margin-right: 146px;
+        margin-right: 125px;
 
         &:last-child {
 
@@ -51,7 +51,7 @@
         @media screen and (max-width: 1186px) {
 
             margin: 0 0 32px;
-            
+
             &:last-child {
 
                 margin-bottom: 0;
@@ -62,11 +62,22 @@
 
     &__section-title {
 
-        writing-mode: sideways-lr;
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -ms-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+
+        /* also accepts left, right, top, bottom coordinates; not required, but a good idea for styling */
+        -webkit-transform-origin: 50% 50%;
+        -moz-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+        -o-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
         display: flex;
         align-self: flex-start;
         letter-spacing: 0.7px;
-        margin-right: 20px;
+        margin-top: 20px;
 
     }
 
@@ -85,7 +96,7 @@
         align-self: flex-start;
         color: #fff;
         font-size: 18px;
-        margin-bottom: 24px;
+        margin-bottom: 14px;
         border-bottom: 1px solid transparent;
         transition: .3s ease;
         cursor: pointer;
@@ -113,20 +124,20 @@
 
     display: flex;
     flex-direction: column;
+    padding-top: 16px;
 
     &__contacts {
 
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        margin-bottom: 70px;
+        margin-bottom: 56px;
 
         @media screen and (max-width: 1186px) {
 
             display: none;
 
         }
-
     }
 
     &__contacts-link {
@@ -165,7 +176,6 @@
             flex-direction: column;
 
         }
-
     }
 
     &__link {
@@ -173,6 +183,7 @@
         font-size: 29.5px;
         color: #fff;
         text-transform: uppercase;
+        word-spacing: 16px;
         margin-right: 102px;
         border-bottom: 5px solid transparent;
         transition: .3s ease;

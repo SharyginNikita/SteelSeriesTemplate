@@ -88,7 +88,7 @@
 }
 
 .arrow {
-    margin: 25px;
+    margin: 10px;
     @include arrow(12px, 2px, 2px, 20px);
     @include arrowColor(#000);
     transition: .3s ease;

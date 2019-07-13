@@ -38,6 +38,7 @@
         flex-direction: column;
         flex-shrink: 0;
         padding-right: 100px;
+        padding-top: 70px;
 
         @media screen and (max-width: 846px) {
 
@@ -52,7 +53,7 @@
     &__row {
 
         display: flex;
-        margin-bottom: 57px;
+        margin-bottom: 41px;
 
         @media screen and (max-width: 846px) {
 
@@ -78,7 +79,7 @@
 
     @media screen and (max-width: 846px) {
 
-        margin-right: 5px;
+        margin-right: 3px;
          
      }   
 

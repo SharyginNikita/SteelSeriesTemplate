@@ -94,7 +94,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar productItems = document.querySelectorAll('.product-item');\nconsole.log(productItems);\n\nvar _loop = function _loop(i) {\n  var item = productItems[i];\n  var itemWrap = item.querySelector('.product-item__wrapper');\n  item.addEventListener('click', function (event) {\n    item.classList.toggle('product-item_active');\n\n    if (itemWrap) {\n      event.preventDefault();\n      item.addEventListener('click', function (event) {\n        event.stopPropagation();\n      });\n\n      if (itemWrap.style.height == '0px' || itemWrap.style.height == 0) {\n        itemWrap.style.height = itemWrap.scrollHeight + 'px';\n        itemWrap.style.marginTop = '20px';\n      } else {\n        itemWrap.style.height = '0px';\n        itemWrap.style.margin = '0px';\n      }\n    }\n  });\n  console.log(item);\n};\n\nfor (var i = 0; i < productItems.length; i++) {\n  _loop(i);\n}\n\n//# sourceURL=webpack:///./src/js/product.js?");
+eval("\n\nvar productItems = document.querySelectorAll('.product-item');\nconsole.log(productItems);\n\nvar _loop = function _loop(i) {\n  var item = productItems[i];\n  var itemTitle = item.querySelector('.product-item__row');\n  var itemWrap = item.querySelector('.product-item__wrapper');\n  itemTitle.addEventListener('click', function (event) {\n    item.classList.toggle('product-item_active');\n\n    if (itemWrap) {\n      event.preventDefault();\n      item.addEventListener('click', function (event) {\n        event.stopPropagation();\n      });\n\n      if (itemWrap.style.height == '0px' || itemWrap.style.height == 0) {\n        itemWrap.style.height = itemWrap.scrollHeight + 'px';\n        itemWrap.style.margin = '120px 0';\n      } else {\n        itemWrap.style.height = '0px';\n        itemWrap.style.margin = '0px';\n      }\n    }\n  });\n  console.log(item);\n};\n\nfor (var i = 0; i < productItems.length; i++) {\n  _loop(i);\n}\n\n//# sourceURL=webpack:///./src/js/product.js?");
 
 /***/ }),
 
@@ -105,7 +105,7 @@ eval("\n\nvar productItems = document.querySelectorAll('.product-item');\nconsol
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__(/*! /usr/local/www/sites/SteelSeriesTemplate/src/js/product.js */\"./src/js/product.js\");\n\n\n//# sourceURL=webpack:///multi_./src/js/product.js?");
+eval("module.exports = __webpack_require__(/*! G:\\project\\SteelSeriesTemplate\\src\\js\\product.js */\"./src/js/product.js\");\n\n\n//# sourceURL=webpack:///multi_./src/js/product.js?");
 
 /***/ })
 

@@ -6,9 +6,10 @@ console.log(productItems);
 
 for (let i = 0; i < productItems.length; i++) {
     let item = productItems[i];
+    let itemTitle = item.querySelector('.product-item__row');
     let itemWrap = item.querySelector('.product-item__wrapper');
 
-    item.addEventListener('click', event => {
+    itemTitle.addEventListener('click', event => {
 
         item.classList.toggle('product-item_active');
 
@@ -22,7 +23,7 @@ for (let i = 0; i < productItems.length; i++) {
 
             if (itemWrap.style.height == '0px' || itemWrap.style.height == 0 ) {
                 itemWrap.style.height = itemWrap.scrollHeight + 'px';
-                itemWrap.style.marginTop = '20px';
+                itemWrap.style.margin = '120px 0';
             }
 
             else {

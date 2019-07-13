@@ -11,6 +11,7 @@ html(lang="ru")
         //meta(name="msapplication-TileImage" content="/images/faviocns/ms-icon-144x144.png")
         meta(name="theme-color" content="#ffffff")
         link(rel="stylesheet" href="./css/main.css")
+        link(rel="stylesheet" href="./css/custom.css")
 
     body.body
 
@@ -26,9 +27,13 @@ html(lang="ru")
 
                         .product__row
 
-                            h1.title.title_h2 Гильотины для бумагообрезательных машин
+                            h1.product__title Гильотины для бумагообрезательных машин
 
-                            .product__link-download Скачать каталог
+                            a(href="#").product__link-download 
+
+                                .product__link-download-text Скачать каталог
+
+                                include ./../images/icons/download.svg
 
                         .product__text
 

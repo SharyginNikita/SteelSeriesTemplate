@@ -1,0 +1,360 @@
+.popup-shadow {
+
+    animation: fadeEffect 1s;
+
+}
+
+.popup {
+
+    &__content {
+
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        padding: 20px;
+
+    }
+
+    &__item {
+
+        display: flex;
+        margin-bottom: 20px;
+
+        &_row {
+
+            display: flex;
+            align-items: center;
+
+        }
+
+        &_column {
+
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        &:last-child {
+
+            margin-bottom: 0;
+
+        }
+    }
+
+    &__row {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &__label {
+
+        font-size: 28px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+
+        &_file {}
+
+    }
+
+    &__input {
+
+        border: 0;
+        font-size: 31px;
+        font-weight: 300;
+        color: #000;
+
+        &::-webkit-input-placeholder {
+            /* Chrome */
+            color: #000;
+        }
+
+        &:-ms-input-placeholder {
+            /* IE 10+ */
+            color: #000;
+        }
+
+        &::-moz-placeholder {
+            /* Firefox 19+ */
+            color: #000;
+            opacity: 1;
+        }
+
+        &:-moz-placeholder {
+            /* Firefox 4 - 18 */
+            color: #000;
+            opacity: 1;
+        }
+
+        &_16px {
+
+            font-size: 16px;
+
+        }
+    }
+
+    &__agree {
+
+        font-size: 16px;
+
+        &-link {
+
+            color: #000;
+            border-bottom: 1px solid #000;
+            transition: .3s ease;
+
+            &:hover {
+
+                color: $color-green;
+                border-color: $color-green;
+                transition: .3s ease;
+
+            }
+        }
+    }
+
+    &__select {
+
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        border: 1px solid #d9d9d9;
+        background-color: transparent;
+        position: relative;
+        padding: 9px 10px;
+        width: 85px;
+        color: #1a1a1a;
+        font-weight: bold;
+        font-size: 14px;
+        cursor: pointer;
+
+
+        &-wrapper {
+
+            display: flex;
+            align-items: center;
+            position: relative;
+
+            &:after {
+
+                content: '';
+                position: absolute;
+                right: 5px;
+                width: 10px;
+                height: 12px;
+                background: url('/images/icons/arrow-down.svg') no-repeat center;
+                background-size: contain;
+                pointer-events: none;
+
+
+            }
+
+
+        }
+
+        &-text {
+
+            margin-right: 10px;
+
+        }
+
+    }
+
+
+}
+
+
+/* Styling Checkbox Starts */
+.checkbox-label {
+    display: block;
+    position: relative;
+    margin: auto;
+    cursor: pointer;
+    font-size: 22px;
+    line-height: 24px;
+    height: 28px;
+    width: 28px;
+    clear: both;
+    margin-right: 10px;
+
+    input {
+
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+}
+
+
+.checkbox-label .checkbox-custom {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 24px;
+    width: 24px;
+    background-color: transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    border: 2px solid $color-green;
+}
+
+
+.checkbox-label input:checked~.checkbox-custom {
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    -webkit-transform: rotate(0deg) scale(1);
+    -ms-transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1);
+    opacity: 1;
+    border: 2px solid $color-green;
+}
+
+
+.checkbox-label .checkbox-custom::after {
+    position: absolute;
+    content: "";
+    left: 12px;
+    top: 12px;
+    height: 0px;
+    width: 0px;
+    border-radius: 5px;
+    border: solid #009BFF;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(0deg) scale(0);
+    -ms-transform: rotate(0deg) scale(0);
+    transform: rotate(0deg) scale(0);
+    opacity: 1;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+}
+
+
+.checkbox-label input:checked~.checkbox-custom::after {
+    -webkit-transform: rotate(45deg) scale(1);
+    -ms-transform: rotate(45deg) scale(1);
+    transform: rotate(45deg) scale(1);
+    opacity: 1;
+    left: 8px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid $color-green;
+    border-width: 0 2px 2px 0;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+
+
+/* For Ripple Effect */
+.checkbox-label .checkbox-custom::before {
+    position: absolute;
+    content: "";
+    left: 10px;
+    top: 10px;
+    width: 0px;
+    height: 0px;
+    border-radius: 5px;
+    border: 2px solid $color-green;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+}
+
+.checkbox-label input:checked~.checkbox-custom::before {
+    left: -3px;
+    top: -3px;
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+    -webkit-transform: scale(3);
+    -ms-transform: scale(3);
+    transform: scale(3);
+    opacity: 0;
+    z-index: 999;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+}
+
+.inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.inputfile+label {
+    max-width: 80%;
+    font-size: 1.25rem;
+    /* 20px */
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    padding: 0.625rem 1.25rem;
+    /* 10px 20px */
+}
+
+.no-js .inputfile+label {
+    display: none;
+}
+
+.inputfile:focus+label,
+.inputfile.has-focus+label {
+    outline: 1px dotted #000;
+    outline: -webkit-focus-ring-color auto 5px;
+}
+
+.inputfile+label * {
+    /* pointer-events: none; */
+    /* in case of FastClick lib use */
+}
+
+.inputfile+label svg {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+    fill: currentColor;
+    margin-top: -0.25em;
+    /* 4px */
+    margin-right: 0.25em;
+    /* 4px */
+}
+
+
+/* style 1 */
+
+.inputfile-1+label {
+    color: #fff;
+    background-color: $color-green;
+    transition: .3s ease;
+}
+
+.inputfile-1:focus+label,
+.inputfile-1.has-focus+label,
+.inputfile-1+label:hover {
+    background-color: $color-green-lg;
+    transition: .3s ease;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }

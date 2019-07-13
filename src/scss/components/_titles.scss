@@ -17,13 +17,20 @@
         font-family: $font-subtitle;
         font-size: 30px;
         font-weight: bold;
+        letter-spacing: 1.7px;
 
         @media screen and (max-width: 916px) {
 
-            font-stretch: semi-condensed;
             font-size: 24px;
     
         }
+    }
+    
+    &_main {
+
+        font-family: $font-default;
+        font-size: 30px;
+
     }
 }
 
