@@ -28,11 +28,29 @@ header.header
 
                     .header-nav__title Меню
 
-                a(href="./about-us.html").header-nav__link О нас
+                .header-nav__item
 
-                a(href="./products.html").header-nav__link.header-nav__link_active Продукция
+                    a(href="./about-us.html").header-nav__link.header-nav__link_level_0 О нас
 
-                a(href="./contacts.html").header-nav__link Контакты
+                .header-nav__item
+
+                    a(href="./products.html").header-nav__link.header-nav__link_level_0.header-nav__item_active Продукция
+
+                    .header-nav.header-nav_level_1
+
+                        a(href="#").header-nav__link.header-nav__link_level_1 Вся продукция
+
+                        a(href="#").header-nav__link.header-nav__link_level_1 Гильотины
+
+                        a(href="#").header-nav__link.header-nav__link_level_1 Дисковые
+
+                        a(href="#").header-nav__link.header-nav__link_level_1 Заточеные
+
+                        a(href="#").header-nav__link.header-nav__link_level_1 Другие
+
+                .header-nav__item
+
+                    a(href="./contacts.html").header-nav__link.header-nav__link_level_0 Контакты
 
         .header__contacts.header-contacts
 

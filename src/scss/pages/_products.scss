@@ -215,16 +215,6 @@
 
 .section-products-catalog {
 
-    @keyframes fadeEffect {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
-    }
-
     animation: fadeEffect 1s;
     display: none;
     flex-grow: 1;
