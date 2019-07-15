@@ -17,17 +17,18 @@ class Product {
         if (this._productItems) {
 
             this._productItems[0].classList.add('product-item_active');
+            let itemWrap = this._productItems[0].querySelector('.product-item__wrapper');
 
-            if (this._productItems[0].style.height == '0px' || this._productItems[0].style.height == 0) {
-                this._productItems[0].style.height = this._productItems[0].scrollHeight + 'px';
+            if (itemWrap.style.height == '0px' || itemWrap.style.height == 0) {
+                itemWrap.style.height = itemWrap.scrollHeight + 'px';
                 if (this._clientWidth <= 676) {
-                    this._productItems[0].style.margin = '25px 0 20px 0';
+                    itemWrap.style.margin = '25px 0 20px 0';
                 } else {
-                    this._productItems[0].style.margin = '25px 0 120px 0';
+                    itemWrap.style.margin = '25px 0 120px 0';
                 }
             } else {
-                this._productItems[0].style.height = '0px';
-                this._productItems[0].style.margin = '0px';
+                itemWrap.style.height = '0px';
+                itemWrap.style.margin = '0px';
             }
 
             this._productItems.forEach(item => {

@@ -17,7 +17,7 @@
         align-items: flex-end;
         width: 100%;
         max-width: $width-container;
-        padding: 11px 20px 6px;
+        padding: 11px 20px 9px;
         box-sizing: border-box;
 
         @media screen and (max-width: 1056px) {
@@ -55,44 +55,57 @@
 
 .header-nav {
 
-
     display: flex;
     align-items: center;
     margin-right: 15px;
 
-    @media screen and (max-width: 1056px) {
+    &_level_0 {
 
-        position: fixed;
-        display: flex;
-        align-items: flex-start;
-        padding: 40px 20px;
-        box-sizing: border-box;
-        flex-direction: column;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: #fff;
-        z-index: 4;
-        transform: translateY(-100%);
-        transition: .3s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+        @media screen and (max-width: 1056px) {
 
+            position: fixed;
+            display: flex;
+            align-items: flex-start;
+            padding: 40px 20px;
+            box-sizing: border-box;
+            flex-direction: column;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background-color: #fff;
+            z-index: 4;
+            transform: translateY(-100%);
+            transition: .3s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+
+        }
     }
 
     &_level_1 {
 
         display: none;
         position: absolute;
-        top: 34px;
+        top: -41px;
         left: 0;
         flex-direction: column;
         box-sizing: border-box;
-        padding: 0 0 20px 0;
+        padding: 41px 5px 20px 5px;
         width: 100%;
         background-color: $color-green;
         margin-right: 0;
         animation: fadeEffect .2s;
 
+        @media screen and (max-width: 1056px) {
+            display: flex;
+            align-items: flex-start;
+            position: static;
+            overflow: auto;
+            padding: 0 0 0 14px;
+            background-color: transparent;
+            height: 0;
+            overflow: hidden;
+            transition: .3s ease;
+        }
     }
 
     &_active {
@@ -109,7 +122,7 @@
 
         display: none;
         border-bottom: 5px solid $color-green;
-        margin-bottom: 40px;
+        margin-bottom: 23px;
 
         @media screen and (max-width: 1056px) {
 
@@ -154,33 +167,32 @@
     &__item {
 
         position: relative;
-        padding: 0 30px;
+        display: flex;
+        margin-right: 15px;
         box-sizing: border-box;
-        padding-bottom: 3px;
-        transition: .3s ease;
 
-        &:hover {
+        @media screen and (min-width: 1056px) {
 
-            background-color: $color-green;
-            transition: .3s ease;
-        
-            .header-nav_level_1 {
+            &:hover {
 
-                display: flex;
+                .header-nav_level_1 {
 
+                    display: flex;
+
+                }
             }
+        }
 
-            .header-nav__link_level_0 {
-            
-                color: #fff;
-                transition: .3s ease;
+        @media screen and (max-width: 1056px) {
 
-            }
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+            padding: 0;
 
-            .header-nav__item_active {
-            
-                border-color: #fff;
-                transition: .3s ease;
+            &:last-child {
+
+                margin-bottom: 0;
 
             }
         }
@@ -191,20 +203,72 @@
 
         }
 
+        &_products {
+
+            padding: 0 34px;
+
+            @media screen and (max-width: 1056px) {
+
+                padding: 0;
+
+            }
+
+            .header-nav__link_level_1 {
+                &:first-child {
+
+                    @media screen and (max-width: 1056px) {
+
+                        display: none;
+
+                    }
+                }
+            }
+
+        }
+
         &_active {
 
-            border-bottom: 5px solid $color-green;
-            font-weight: 700;
-            color: $color-green;
-            transition: .3s ease;
+            .header-nav__link_level_0 {
 
+                border-bottom: 6px solid $color-green;
+                padding-bottom: 4px;
+                color: $color-green;
+                transition: .3s ease;
+
+                font-weight: bold;
+                color: $color-green !important;
+
+                @media screen and (max-width: 1056px) {
+
+                    padding: 0;
+                    margin-bottom: 0;
+
+                }
+            }
+
+            .header-nav__link_level_1 {
+
+                color: #fff;
+
+                &:first-child {
+
+                    border-bottom: 6px solid #fff;
+                    padding-bottom: 4px;
+
+                    @media screen and (max-width: 1056px) {
+
+                        display: none;
+
+                    }
+
+                }
+            }
         }
     }
 
     &__link {
 
         font-size: 18px;
-        color: $color-black;
         text-decoration: none;
         transition: .3s ease;
         line-height: 1.7;
@@ -217,15 +281,13 @@
             font-size: 28px;
             text-transform: uppercase;
             line-height: 1;
-            margin-bottom: 10px;
 
-        }
 
-        &:hover {
+            &:last-child {
 
-            color: $color-green;
-            transition: .3s ease;
+                margin-bottom: 0;
 
+            }
         }
 
         &_level_0 {
@@ -233,12 +295,41 @@
             color: #000;
             transition: .3s ease;
 
+            &:hover {
+
+                color: $color-green;
+                transition: .3s ease;
+
+            }
         }
 
         &_level_1 {
 
+            margin-bottom: 15px;
             color: #fff;
 
+            @media screen and (max-width: 1056px) {
+
+                font-family: $font-default;
+                font-size: 18px;
+                font-weight: 400;
+                text-transform: capitalize;
+                margin-bottom: 15px;
+                color: #000 !important;
+
+                &:last-child {
+
+                    margin-bottom: 0;
+
+                }
+
+            }
+
+            &:last-child {
+
+                margin-bottom: 0;
+
+            }
         }
     }
 }
@@ -263,7 +354,6 @@
         width: 100%;
 
     }
-
 
     &__link {
 

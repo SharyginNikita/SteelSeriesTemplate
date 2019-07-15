@@ -198,6 +198,41 @@ class Menu {
         this._menu = menu;
 
     }
+    initMobileMenu() {
+
+        let menuLevelZero = document.querySelectorAll('.header-nav__item_level_0');
+
+        menuLevelZero.forEach(elem => {
+
+            let item = elem.querySelector('.header-nav_level_1');
+
+            elem.addEventListener('dblclick', event => {
+                let elemLink = elem.querySelector('.header-nav__link');
+                let link = elemLink.getAttribute('href');
+                location.replace(link);
+            });
+
+            elem.addEventListener('click', event => {
+
+                if (item) {
+
+                    event.preventDefault();
+
+                    item.addEventListener('click', event => {
+                        event.stopPropagation();
+                    });
+
+                    if (item.style.height == '0px' || item.style.height == 0) {
+                        item.style.height = item.scrollHeight + 'px';
+                        item.style.marginTop = '7px';
+                    } else {
+                        item.style.height = '0px';
+                        item.style.margin = '0px';
+                    }
+                }
+            });
+        });
+    }
 
     add() {
 
@@ -205,6 +240,8 @@ class Menu {
             this._burgerBtn.classList.toggle('is-active');
             this._menu.classList.toggle('header-nav_active')
         });
+
+        this.initMobileMenu();
     }
 }
 
@@ -250,7 +287,6 @@ class Products {
             let categoryMenu = document.querySelector('.section-products__menu');
             let btnClose = document.querySelector('#section-products__close-btn');
             let div = document.createElement('div');
-
 
             if (categoryMenu) {
                 div.className = "section-products__category-item section-products__category-item_active section-products__category-item_title-tab";
