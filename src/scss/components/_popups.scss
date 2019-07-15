@@ -56,8 +56,6 @@
         text-transform: uppercase;
         margin-bottom: 15px;
 
-        &_file {}
-
     }
 
     &__input {
@@ -322,11 +320,6 @@
     outline: -webkit-focus-ring-color auto 5px;
 }
 
-.inputfile+label * {
-    /* pointer-events: none; */
-    /* in case of FastClick lib use */
-}
-
 .inputfile+label svg {
     width: 1em;
     height: 1em;
@@ -355,6 +348,11 @@
 }
 
 @keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

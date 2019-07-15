@@ -10,7 +10,7 @@
     &__text {
 
         font-size: 17px;
-        margin-top: 25px;
+        margin-top: 19px;
 
     }
 
@@ -32,8 +32,8 @@
         display: flex;
         flex-direction: column;
         flex-shrink: 0;
-        margin-right: 130px;
-        padding-top: 87px;
+        margin-right: 143px;
+        padding-top: 74px;
 
         @media screen and (max-width: 656px) {
 
@@ -73,6 +73,7 @@
 
                 transform: translateY(0%);
                 transition: .3s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+                z-index: 100;
 
             }
         }
@@ -82,11 +83,11 @@
             display: flex;
             align-self: flex-start;
             font-family: $font-subtitle;
-            font-size: 30px;
+            font-size: 28px;
             font-weight: bold;
             color: $color-black;
             text-decoration: none;
-            margin-bottom: 25px;
+            margin-bottom: 1px;
             text-transform: uppercase;
             border-bottom: 5px solid transparent;
             transition: .3s ease;
@@ -115,13 +116,74 @@
 
                 display: flex;
                 align-self: flex-start;
+                font-size: 30px;
+                margin-bottom: 10px;
                 border-color: $color-green;
                 color: $color-green;
                 transition: .3s ease;
 
             }
+
+            &_title-tab {
+
+                display: none;
+
+                @media screen and (max-width: 656px) {
+
+                    display: block;
+
+                }
+            }
+        }
+
+        &-wrapper-title {
+
+            display: none;
+            border-bottom: 5px solid $color-green;
+            margin-bottom: 40px;
+    
+            @media screen and (max-width: 656px) {
+    
+                display: flex;
+                align-items: center;
+    
+                .hamburger-inner,
+                .hamburger-inner:after,
+                .hamburger-inner:before {
+    
+                    background-color: $color-green;
+    
+                }
+    
+                .hamburger {
+    
+                    cursor: default;
+    
+                    &:hover {
+    
+                        opacity: 1;
+    
+                    }
+                }
+            }
+        }
+    
+        &-title {
+    
+            @media screen and (max-width: 1056px) {
+    
+                font-family: $font-subtitle;
+                font-weight: bold;
+                font-size: 30px;
+                color: $color-green;
+                text-transform: uppercase;
+                margin-left: 10px;
+    
+            }
         }
     }
+
+   
 
     &__sort {
 
@@ -147,9 +209,7 @@
                 transition: .3s ease;
 
             }
-
         }
-
     }
 }
 
@@ -169,11 +229,18 @@
     display: none;
     flex-grow: 1;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
     gap: 60px 90px;
 
     &_active {
 
         display: grid;
+
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+         }
     }
 
     @media screen and (max-width: 1096px) {
@@ -192,6 +259,12 @@
 
         display: flex;
         flex-direction: column;
+
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+            max-width: 48%;
+            width: 100%;
+            margin-bottom: 20px;
+         }
 
         @media screen and (max-width: 656px) {
 
@@ -218,19 +291,9 @@
         &-wrapper {
 
             width: 100%;
-            height: 340px;
-            margin-bottom: 11px;
+            height: 329px;
+            margin-bottom: 8px;
             overflow: hidden;
-
-        }
-
-        &-image {
-
-            
-            background: url('../images/section-purpose__image.png') no-repeat center / cover;
-            height: 100%;
-            transform: scale(1);
-            transition: .3s ease;
 
             @media screen and (max-width: 1196px) {
 
@@ -244,6 +307,18 @@
                 height: 100px;
 
             }
+
+        }
+
+        &-image {
+
+
+            background: url('../images/section-purpose__image.png') no-repeat center / cover;
+            height: 100%;
+            transform: scale(1);
+            transition: .3s ease;
+
+
 
         }
 

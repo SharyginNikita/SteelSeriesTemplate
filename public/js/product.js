@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -94,11 +94,11 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar productItems = document.querySelectorAll('.product-item');\nconsole.log(productItems);\n\nvar _loop = function _loop(i) {\n  var item = productItems[i];\n  var itemTitle = item.querySelector('.product-item__row');\n  var itemWrap = item.querySelector('.product-item__wrapper');\n  itemTitle.addEventListener('click', function (event) {\n    item.classList.toggle('product-item_active');\n\n    if (itemWrap) {\n      event.preventDefault();\n      item.addEventListener('click', function (event) {\n        event.stopPropagation();\n      });\n\n      if (itemWrap.style.height == '0px' || itemWrap.style.height == 0) {\n        itemWrap.style.height = itemWrap.scrollHeight + 'px';\n        itemWrap.style.margin = '25px 0 120px 0';\n      } else {\n        itemWrap.style.height = '0px';\n        itemWrap.style.margin = '0px';\n      }\n    }\n  });\n  console.log(item);\n};\n\nfor (var i = 0; i < productItems.length; i++) {\n  _loop(i);\n}\n\n//# sourceURL=webpack:///./src/js/product.js?");
+eval("\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\nfunction _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }\n\nfunction _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }\n\nvar Product =\n/*#__PURE__*/\nfunction () {\n  function Product() {\n    _classCallCheck(this, Product);\n\n    var productItems = document.querySelectorAll('.product-item');\n    var clientWidth = document.documentElement.clientWidth;\n    this._productItems = productItems;\n    this._clientWidth = clientWidth;\n  }\n\n  _createClass(Product, [{\n    key: \"addShowHide\",\n    value: function addShowHide() {\n      var _this = this;\n\n      if (this._productItems) {\n        this._productItems.forEach(function (item) {\n          var itemTitle = item.querySelector('.product-item__row');\n          var itemWrap = item.querySelector('.product-item__wrapper');\n          itemTitle.addEventListener('click', function (event) {\n            item.classList.toggle('product-item_active');\n\n            if (itemWrap) {\n              event.preventDefault();\n              item.addEventListener('click', function (event) {\n                event.stopPropagation();\n              });\n\n              if (itemWrap.style.height == '0px' || itemWrap.style.height == 0) {\n                itemWrap.style.height = itemWrap.scrollHeight + 'px';\n\n                if (_this._clientWidth <= 676) {\n                  itemWrap.style.margin = '25px 0 20px 0';\n                } else {\n                  itemWrap.style.margin = '25px 0 120px 0';\n                }\n              } else {\n                itemWrap.style.height = '0px';\n                itemWrap.style.margin = '0px';\n              }\n            }\n          });\n        });\n      }\n    }\n  }]);\n\n  return Product;\n}();\n\nnew Product().addShowHide();\n\n//# sourceURL=webpack:///./src/js/product.js?");
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!*********************************!*\
   !*** multi ./src/js/product.js ***!
   \*********************************/

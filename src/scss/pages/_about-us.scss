@@ -49,10 +49,17 @@
 
         /* autoprefixer grid: autoplace */
 
+        width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 315px 315px;
+        grid-template-rows: auto;
         gap: 70px;
+
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+         }
 
         @media screen and (max-width: 1086px) {
 
@@ -78,6 +85,12 @@
 
     background: url('../images/section-purpose__image.png') no-repeat center / cover;
     overflow: hidden;
+    min-height: 315px;
+
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+        width: 48%;
+        margin-bottom: 40px;
+     }
 
     &:nth-child(4n +2) {
 
@@ -92,7 +105,7 @@
 
     @media screen and (max-width: 916px) {
 
-        dispay: none;
+        display: none;
         padding: 0;
 
         &:nth-child(1),
@@ -120,7 +133,7 @@
 
     @media screen and (max-width: 1280px) {
 
-        padding: 0 20px;
+        padding: 0 20px 20px;
         box-sizing: border-box;
 
     }
@@ -137,6 +150,7 @@
         
         display: grid;
         grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: auto;
         gap: 15px;
         margin-top: 45px;
         box-sizing: border-box;
@@ -169,6 +183,11 @@
             gap: 8px;
 
         }
+
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+            display: flex;
+            flex-wrap: wrap;
+         }
     }
 
     &__item {
@@ -176,6 +195,11 @@
         box-sizing: border-box;
         border: 1px solid $color-gray;
         padding: 7px;
+
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+            max-width: 300px;
+            width: 100%;
+         }
 
     }
 

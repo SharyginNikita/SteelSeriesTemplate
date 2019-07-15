@@ -1,9 +1,14 @@
 .header {
 
+    position: static;
+    position: sticky;
+    top: 0;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #fff;
+    z-index: 99;
 
     &__wrapper {
 
@@ -35,7 +40,7 @@
 
         width: 117px;
         height: 64px;
-        background: url('../images/logo.png') no-repeat center / contain;
+        background: url('../images/logo.png') no-repeat 0 center / contain;
         margin-right: 15px;
 
         @media screen and (max-width: 516px) {
@@ -116,7 +121,6 @@
     }
 
     &__title {
-
 
         @media screen and (max-width: 1056px) {
 

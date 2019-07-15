@@ -1,40 +1,54 @@
 'use strict';
 
-let productItems = document.querySelectorAll('.product-item');
+class Product {
 
-console.log(productItems);
+    constructor() {
 
-for (let i = 0; i < productItems.length; i++) {
-    let item = productItems[i];
-    let itemTitle = item.querySelector('.product-item__row');
-    let itemWrap = item.querySelector('.product-item__wrapper');
+        let productItems = document.querySelectorAll('.product-item');
+        let clientWidth = document.documentElement.clientWidth;
 
-    itemTitle.addEventListener('click', event => {
+        this._productItems = productItems;
+        this._clientWidth = clientWidth;
 
-        item.classList.toggle('product-item_active');
+    }
 
-        if (itemWrap) {
+    addShowHide() {
 
-            event.preventDefault();
+        if (this._productItems) {
 
-            item.addEventListener('click', event => { 
-                event.stopPropagation(); 
-            });
+            this._productItems.forEach(item => {
 
-            if (itemWrap.style.height == '0px' || itemWrap.style.height == 0 ) {
-                itemWrap.style.height = itemWrap.scrollHeight + 'px';
-                itemWrap.style.margin = '25px 0 120px 0';
-            }
+                let itemTitle = item.querySelector('.product-item__row');
+                let itemWrap = item.querySelector('.product-item__wrapper');
 
-            else {
-                itemWrap.style.height = '0px';
-                itemWrap.style.margin = '0px';
-            }
+                itemTitle.addEventListener('click', event => {
+
+                    item.classList.toggle('product-item_active');
+
+                    if (itemWrap) {
+
+                        event.preventDefault();
+
+                        item.addEventListener('click', event => {
+                            event.stopPropagation();
+                        });
+
+                        if (itemWrap.style.height == '0px' || itemWrap.style.height == 0) {
+                            itemWrap.style.height = itemWrap.scrollHeight + 'px';
+                            if (this._clientWidth <= 676) {
+                                itemWrap.style.margin = '25px 0 20px 0';
+                            } else {
+                                itemWrap.style.margin = '25px 0 120px 0';
+                            }
+                        } else {
+                            itemWrap.style.height = '0px';
+                            itemWrap.style.margin = '0px';
+                        }
+                    }
+                });
+            })
         }
-    });
-
-
-    console.log(item);
+    }
 }
 
-
+new Product().addShowHide();

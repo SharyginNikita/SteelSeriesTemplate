@@ -2,10 +2,34 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700&display=swap');
 
 @font-face {
-    font-family: "CaviarDreamsBold";  
+    font-family: "Caviar Dreams Bold";  
     src: url("../fonts/CaviarDreams/CaviarDreams-Bold.woff") format('woff'),
             url("../fonts/CaviarDreams/CaviarDreams-Bold.eot") format('eot'),
             url("../fonts/CaviarDreams/CaviarDreams-Bold.ttf") format('ttf');
+    font-display: auto;
+    font-style: normal; 
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Source Sans Pro";  
+    src: url("../fonts/SourceSansPro-Regular.otf") format('opentype');
+    font-display: auto;
+    font-style: normal; 
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Source Sans Pro Bold";  
+    src: url("../fonts/SourceSansPro-Bold.otf") format('opentype');
+    font-display: auto;
+    font-style: normal; 
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Source Code Pro Bold";  
+    src: url("../fonts/SourceCodePro/SourceCodePro-Bold.otf") format('opentype');
     font-display: auto;
     font-style: normal; 
     font-weight: bold;

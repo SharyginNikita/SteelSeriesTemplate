@@ -14,13 +14,14 @@
         width: 100%;
         max-width: $width-container;
         box-sizing: border-box;
-        padding: 28px 20px 20px 63px;
+        padding: 28px 20px 63px 20px;
 
         @media screen and (max-width: 1186px) {
 
             flex-direction: column;
             align-items: flex-start;
             justify-content: flex-start;
+            padding-bottom: 39px;
 
         }
     }
@@ -40,7 +41,7 @@
     &__menu-wrapper {
 
         display: flex;
-        margin-right: 125px;
+        margin-right: 111px;
 
         &:last-child {
 
@@ -75,8 +76,11 @@
         -o-transform-origin: 50% 50%;
         transform-origin: 50% 50%;
         
+        position: relative;
+        left: -23px;
         display: flex;
         align-self: flex-start;
+        line-height: 1;
         letter-spacing: 0.7px;
         margin-top: 20px;
 
@@ -86,6 +90,8 @@
 
 .footer-nav {
 
+    position: relative;
+    left: -21px;
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
