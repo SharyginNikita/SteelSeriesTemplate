@@ -101,16 +101,7 @@
 
         padding: 0;
         width: 27px;
-        height: 19px;
-
-        &:active,
-        &:focus {
-            outline: none;
-        }
-
-        &:-moz-focus-inner {
-            border: 0;
-        }
+        height: 19px; 
 
         &-box {
 
