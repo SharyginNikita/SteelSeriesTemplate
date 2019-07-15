@@ -126,7 +126,6 @@
         padding: 0 10px;
         margin-top: 25px;
 
-
         &-text {
 
             color: #000;
@@ -134,9 +133,8 @@
 
         }
 
-
         &:hover {
-            .product-item__arrow {
+            .arrow {
                 &:after {
                     border-color: $color-green;
                     transition: .3s ease;
@@ -215,7 +213,7 @@
     border-top: 1px solid #000;
     padding: 20px 0;
     transition: .3s ease;
-    cursor: pointer;
+
 
     &:hover {
 
@@ -261,6 +259,7 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
+        cursor: pointer;
 
         @media screen and (max-width: 676px) {
 
@@ -373,10 +372,11 @@
         gap: 15px 25px;
         margin-bottom: 40px;
 
-        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+        @media screen and (-ms-high-contrast: active),
+        (-ms-high-contrast: none) {
             display: flex;
             flex-wrap: wrap;
-         }
+        }
 
         &-item {
             display: flex;
@@ -400,7 +400,6 @@
             grid-template-columns: 1fr;
 
         }
-
     }
 
     &__grid {
@@ -410,7 +409,7 @@
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: auto;
         gap: 39px 26px;
-        
+
 
         @media screen and (max-width: 1116px) {
 
@@ -425,11 +424,12 @@
 
         }
 
-        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+        @media screen and (-ms-high-contrast: active),
+        (-ms-high-contrast: none) {
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-         }
+        }
 
     }
 
@@ -438,11 +438,12 @@
         display: flex;
         flex-direction: column;
 
-        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+        @media screen and (-ms-high-contrast: active),
+        (-ms-high-contrast: none) {
             max-width: 31%;
             width: 100%;
             margin-bottom: 20px;
-         }
+        }
 
         &:hover {
 

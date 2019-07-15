@@ -7,7 +7,7 @@
     cursor: pointer;
 
     &_send {
-    
+
         max-width: 250px;
         background-color: $color-green;
         padding: 19px 22px;
@@ -20,10 +20,10 @@
         transition: .3s ease;
 
         &:hover {
-       
+
             transition: .3s ease;
             background-color: $color-green-lg;
-        
+
         }
     }
 }
@@ -160,18 +160,31 @@
 
     display: none;
 
-    @media screen and (max-width: 656px){
+    @media screen and (max-width: 656px) {
         display: block;
     }
 
 }
 
-#header__menu-btn, #section-products__close-btn {
+#header__menu-btn {
 
     .is-active {
 
         position: fixed;
         bottom: 50px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+
+    }
+}
+
+#section-products__close-btn {
+
+    .is-active {
+
+        position: fixed;
+        bottom: 80px;
         left: 0;
         right: 0;
         margin: 0 auto;

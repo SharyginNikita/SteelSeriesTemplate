@@ -214,7 +214,6 @@ class Products {
 
         let categories = document.querySelectorAll('.section-products__category-item');
         let tabs = document.querySelectorAll('.section-products-catalog');
-        let activeCategory = document.querySelector('.section-products__category-item_title-tab');
         let clientWidth = document.documentElement.clientWidth;
 
 
@@ -224,8 +223,6 @@ class Products {
         this._tabs = tabs;
         this._firstTab = this._tabs[0];
 
-
-        this._activeCategory = activeCategory;
         this._clienWidth = clientWidth;
 
     }
@@ -260,13 +257,13 @@ class Products {
                 categoryMenu.appendChild(div);
             }
 
-            let titleTab = document.querySelector('.section-products__category-item_title-tab');
+            let activeCategory = document.querySelector('.section-products__category-item_title-tab');
 
-            titleTab.innerHTML = this._firstCategory.innerHTML;
+            activeCategory.innerHTML = this._firstCategory.innerHTML;
 
             let category = document.querySelector('.section-products__category');
 
-            titleTab.addEventListener('click', _ => {
+            activeCategory.addEventListener('click', _ => {
                 category.classList.add('section-products__category_active');
             });
 
@@ -297,8 +294,10 @@ class Products {
 
                     elem.classList.add('section-products__category-item_active');
 
-                    if (this._activeCategory) {
-                        this._activeCategory.innerHTML = elem.innerHTML;
+                    let activeCategory = document.querySelector('.section-products__category-item_title-tab');
+
+                    if (activeCategory) {
+                        activeCategory.innerHTML = elem.innerHTML;
                     }
 
                     tab.classList.add('section-products-catalog_active');
