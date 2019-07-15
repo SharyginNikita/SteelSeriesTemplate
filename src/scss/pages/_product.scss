@@ -49,14 +49,13 @@
 
         display: flex;
         flex-direction: column;
-        margin-top: 112px;
+        margin-top: 75px;
 
         @media screen and (max-width: 756px) {
 
-            margin-top: 70px;
+            margin-top: 60px;
 
         }
-
     }
 
     &__row {
@@ -300,7 +299,6 @@
             font-size: 17px;
 
         }
-
     }
 
     &__wrapper {
@@ -316,7 +314,6 @@
             flex-direction: column;
 
         }
-
     }
 
     &__description {

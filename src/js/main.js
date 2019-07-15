@@ -192,46 +192,52 @@ class Menu {
 
         let burger = document.querySelector('#header__menu-btn');
         let menu = document.querySelector('.header-nav');
+        let clientWidth = document.documentElement.clientWidth;
 
         this._burger = burger;
         this._burgerBtn = this._burger.querySelector('.hamburger');
         this._menu = menu;
+        this._clienWidth = clientWidth;
 
     }
+
     initMobileMenu() {
 
-        let menuLevelZero = document.querySelectorAll('.header-nav__item_level_0');
+        if (this._clienWidth <= 1056) {
 
-        menuLevelZero.forEach(elem => {
+            let menuLevelZero = document.querySelectorAll('.header-nav__item_level_0');
 
-            let item = elem.querySelector('.header-nav_level_1');
+            menuLevelZero.forEach(elem => {
 
-            elem.addEventListener('dblclick', event => {
-                let elemLink = elem.querySelector('.header-nav__link');
-                let link = elemLink.getAttribute('href');
-                location.replace(link);
-            });
+                let item = elem.querySelector('.header-nav_level_1');
 
-            elem.addEventListener('click', event => {
+                elem.addEventListener('dblclick', event => {
+                    let elemLink = elem.querySelector('.header-nav__link');
+                    let link = elemLink.getAttribute('href');
+                    location.replace(link);
+                });
 
-                if (item) {
+                elem.addEventListener('click', event => {
 
-                    event.preventDefault();
+                    if (item) {
 
-                    item.addEventListener('click', event => {
-                        event.stopPropagation();
-                    });
+                        event.preventDefault();
 
-                    if (item.style.height == '0px' || item.style.height == 0) {
-                        item.style.height = item.scrollHeight + 'px';
-                        item.style.marginTop = '7px';
-                    } else {
-                        item.style.height = '0px';
-                        item.style.margin = '0px';
+                        item.addEventListener('click', event => {
+                            event.stopPropagation();
+                        });
+
+                        if (item.style.height == '0px' || item.style.height == 0) {
+                            item.style.height = item.scrollHeight + 'px';
+                            item.style.marginTop = '7px';
+                        } else {
+                            item.style.height = '0px';
+                            item.style.margin = '0px';
+                        }
                     }
-                }
+                });
             });
-        });
+        }
     }
 
     add() {
