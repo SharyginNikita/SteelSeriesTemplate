@@ -214,6 +214,7 @@
             }
 
             .header-nav__link_level_1 {
+
                 &:first-child {
 
                     @media screen and (max-width: 1056px) {
@@ -223,7 +224,6 @@
                     }
                 }
             }
-
         }
 
         &_active {
@@ -282,7 +282,6 @@
             text-transform: uppercase;
             line-height: 1;
 
-
             &:last-child {
 
                 margin-bottom: 0;
@@ -315,7 +314,15 @@
                 font-weight: 400;
                 text-transform: capitalize;
                 margin-bottom: 15px;
+                transition: .3s ease;
                 color: #000 !important;
+
+            &:hover {
+
+                color: $color-green !important;
+                transition: .3s ease;
+
+            }
 
                 &:last-child {
 
