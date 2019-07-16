@@ -248,12 +248,12 @@
 
             .header-nav__link_level_1 {
 
-                color: #fff;
 
                 &:first-child {
 
                     border-bottom: 6px solid #fff;
                     padding-bottom: 4px;
+                    color: #fff !important;
 
                     @media screen and (max-width: 1056px) {
 
@@ -306,6 +306,14 @@
 
             margin-bottom: 15px;
             color: #fff;
+            transition: .3s ease;
+
+            &:hover {
+
+                color: #000;
+                transition: .3s ease;
+
+            }
 
             @media screen and (max-width: 1056px) {
 
@@ -317,12 +325,12 @@
                 transition: .3s ease;
                 color: #000 !important;
 
-            &:hover {
+                &:hover {
 
-                color: $color-green !important;
-                transition: .3s ease;
+                    color: $color-green !important;
+                    transition: .3s ease;
 
-            }
+                }
 
                 &:last-child {
 
