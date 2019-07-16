@@ -217,6 +217,10 @@
 
                 &:first-child {
 
+                    border-bottom: 6px solid #fff;
+                    padding-bottom: 4px;
+                    color: #fff !important;
+
                     @media screen and (max-width: 1056px) {
 
                         display: none;
@@ -248,7 +252,6 @@
 
             .header-nav__link_level_1 {
 
-
                 &:first-child {
 
                     border-bottom: 6px solid #fff;
@@ -260,7 +263,6 @@
                         display: none;
 
                     }
-
                 }
             }
         }
